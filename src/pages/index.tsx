@@ -1,5 +1,11 @@
-import Logo from '../components/Logo/Logo';
+import { AppContainerStyled, AppHeader, MainContent } from '../components/index.js';
 
 export default function Home() {
-  return <Logo />
+  return (
+    <AppContainerStyled>
+      <AppHeader />
+      <MainContent />
+      <footer>Footer content</footer>
+    </AppContainerStyled>
+  )
 }
