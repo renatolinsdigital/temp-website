@@ -15,12 +15,12 @@ const neutralColors = {
 
 const defaultColors = { ...visualIdentityColors, ...neutralColors }
 
-const lightModePallete = {
-  colors: { ...defaultColors, ...lightColors }
+const lightModeColors = {
+  colors: { isDarkMode: false, ...defaultColors, ...lightColors }
 }
 
-const darkModePallete = {
-  colors: { ...defaultColors, ...darkColors }
+const darkModeColors = {
+  colors: { isDarkMode: true, ...defaultColors, ...darkColors }
 }
 
 const defaultTheme = {
@@ -68,7 +68,9 @@ const defaultTheme = {
   },
 };
 
-const lightTheme = { ...defaultTheme, ...lightModePallete }
-const darkTheme = { ...defaultTheme, ...darkModePallete }
+const lightTheme = { ...defaultTheme, ...lightModeColors }
+const darkTheme = { ...defaultTheme, ...darkModeColors }
 
 export { lightTheme, darkTheme };
+
+
