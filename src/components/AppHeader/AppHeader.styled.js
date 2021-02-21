@@ -10,11 +10,13 @@ const AppHeaderStyled = styled.header(() => {
   }
 });
 
-AppHeaderStyled.Text = styled.span(({theme}) => (
+AppHeaderStyled.Content = styled.span(({theme}) => (
   {
     padding: '5px 10px',
     color: theme.colors.text,
-    fontSize: theme.fontSizes.small
+    fontSize: theme.fontSizes.small,
+    textTransform: 'uppercase',
+    fontSize: theme.fontSizes.smallest
   }
 ));
 

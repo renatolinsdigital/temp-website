@@ -10,6 +10,7 @@ const visualIdentityColors = {
 
 const neutralColors = {
   white: '#FFFFFF',
+  dark: '#1d1f21',
   black: '#000000'
 }
 
@@ -30,11 +31,11 @@ const defaultTheme = {
       'sans-serif'
     ],
     heading1: [
-      '"TitilliumWeb SemiBold"',
+      '"TitilliumWeb Bold"',
       'sans-serif'
     ],
     heading2: [
-      '"TitilliumWeb Bold"',
+      '"TitilliumWeb SemiBold"',
       'sans-serif'
     ],
     uiElements: [

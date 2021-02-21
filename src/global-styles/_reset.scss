@@ -38,7 +38,7 @@ body {
 }
 
 main {
-  min-height: 400px;
+  min-height: 500px;
 }
 
 ol,
@@ -59,7 +59,8 @@ a {
   word-wrap: break-word;
 }
 
-img {
+img,
+svg {
   max-width: 100%;
   height: auto;
 }
