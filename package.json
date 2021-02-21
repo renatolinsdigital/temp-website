@@ -1,5 +1,5 @@
 {
-  "name": "with-typescript-styled-components",
+  "name": "renato-lins-temporary-website",
   "version": "1.0.0",
   "scripts": {
     "dev": "next",
@@ -10,6 +10,7 @@
     "next": "latest",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
+    "sass": "^1.32.8",
     "styled-components": "^5.0.0"
   },
   "devDependencies": {
