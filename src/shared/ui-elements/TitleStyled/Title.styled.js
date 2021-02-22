@@ -22,7 +22,7 @@ const TitleStyled = styled.h1(({ theme, colorOption }) => {
     fontSize: theme.fontSizes.small,
     textTransform: 'uppercase',
     color: isDarkMode ? darkModeColor : lightModeColor
-  }
+  };
 });
 
 export default TitleStyled;

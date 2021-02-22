@@ -32,7 +32,7 @@ MenuStyled.Item = styled.li(({ theme, hoverColor, hasIcon }) => {
     ':hover': {
       borderLeftColor: selectedHoverColor || null
     }
-  }
+  };
 });
 
 export default MenuStyled;

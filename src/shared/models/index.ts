@@ -1,0 +1,1 @@
+export type { default as VisualIdentityColors } from './VisualIdentityColors.model';

@@ -1,4 +1,4 @@
-
+import React from 'react';
 import { AnchorStyled } from '../';
 import LinkProps from './Link.model';
 
@@ -11,7 +11,7 @@ function Link({ location, label, isOpeningInNewTab, hoverColor, children }: Link
       {label}
       {children}
     </AnchorStyled>
-  )
+  );
 }
 
 export default Link;

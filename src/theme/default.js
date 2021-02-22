@@ -6,7 +6,7 @@ const visualIdentityColors = {
   secondary: '#0085cb',
   tertiary: '#f7ec29',
   quaternary: '#8d8d8d'
-}
+};
 
 const neutralColors = {
   transparent: 'transparent',
@@ -14,17 +14,17 @@ const neutralColors = {
   neutralBlue: '#eaf1f4',
   dark: '#1d1f21',
   black: '#000000'
-}
+};
 
-const defaultColors = { ...visualIdentityColors, ...neutralColors }
+const defaultColors = { ...visualIdentityColors, ...neutralColors };
 
 const lightModeColors = {
   colors: { isDarkMode: false, ...defaultColors, ...lightColors }
-}
+};
 
 const darkModeColors = {
   colors: { isDarkMode: true, ...defaultColors, ...darkColors }
-}
+};
 
 const defaultTheme = {
   fontFamilies: {
@@ -71,8 +71,8 @@ const defaultTheme = {
   },
 };
 
-const lightTheme = { ...defaultTheme, ...lightModeColors }
-const darkTheme = { ...defaultTheme, ...darkModeColors }
+const lightTheme = { ...defaultTheme, ...lightModeColors };
+const darkTheme = { ...defaultTheme, ...darkModeColors };
 
 export { lightTheme, darkTheme };
 

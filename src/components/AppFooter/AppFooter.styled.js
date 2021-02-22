@@ -6,7 +6,7 @@ const AppFooterStyled = styled.footer(() => {
     ...FlexContainer,
     justifyContent: 'center',
     padding: '30px'
-  }
+  };
 });
 
 export default AppFooterStyled;

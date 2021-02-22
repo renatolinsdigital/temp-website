@@ -11,7 +11,8 @@
     "@emotion/styled": "^11.1.5",
     "@material-ui/core": "^5.0.0-alpha.25",
     "@material-ui/icons": "^4.11.2",
-    "next": "latest",
+    "@types/next": "^9.0.0",
+    "next": "^10.0.7",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
     "sass": "^1.32.8",
@@ -20,10 +21,14 @@
   },
   "devDependencies": {
     "@types/node": "12.0.12",
-    "@types/react": "16.8.23",
+    "@types/react": "^17.0.2",
     "@types/react-dom": "16.8.4",
-    "@types/styled-components": "5.0.1",
-    "babel-plugin-styled-components": "^1.10.0",
+    "@types/styled-components": "^5.1.7",
+    "@typescript-eslint/eslint-plugin": "^4.15.1",
+    "@typescript-eslint/parser": "^4.15.1",
+    "babel-plugin-styled-components": "^1.12.0",
+    "eslint": "^7.20.0",
+    "eslint-plugin-react": "^7.22.0",
     "typescript": "4.0"
   },
   "license": "MIT"

@@ -1,8 +1,9 @@
-import { VisualIdentityColor } from "../models";
+/* eslint-disable @typescript-eslint/no-explicit-any */
+import { VisualIdentityColors } from "../models";
 
 const getColorByNumber = (
   theme: any,
-  colorOption: VisualIdentityColor) => {
+  colorOption: VisualIdentityColors): string | null => {
 
   if (!theme || !theme.colors || !colorOption) return null;
 
@@ -18,6 +19,6 @@ const getColorByNumber = (
   const selectedColor = colorOption && colorOptions[colorOption];
 
   return selectedColor;
-}
+};
 
 export default getColorByNumber;

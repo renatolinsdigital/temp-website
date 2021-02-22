@@ -1,10 +1,11 @@
+import React from 'react';
 import MainContentStyled from './MainContent.styled';
-import { Logo } from '../../components/index.js';
+import { Logo } from '..';
 import { TitleStyled } from '../../shared/ui-elements';
-import { Link } from '../../shared/utilities/index.js';
+import { Link } from '../../shared/utilities';
 import { MenuStyled } from '../../shared/containers';
 
-function MainContent() {
+function MainContent(): JSX.Element {
   return (
     <MainContentStyled>
       <MainContentStyled.Grid>
@@ -66,7 +67,7 @@ function MainContent() {
 
       </MainContentStyled.Grid>
     </MainContentStyled>
-  )
+  );
 }
 
 export default MainContent;

@@ -5,7 +5,6 @@ const AppContainerStyled = styled.div(({ theme }) => {
   return {
     display: 'grid',
     minHeight: '100%',
-    height: '100%',
     height: '100vh',
     width: '100%',
     overflowY: 'auto',
@@ -17,7 +16,7 @@ const AppContainerStyled = styled.div(({ theme }) => {
     color: colors.text,
     fontSize: fontSizes.default,
     lineHeight: lineHeights.body
-  }
+  };
 });
 
 export default AppContainerStyled;

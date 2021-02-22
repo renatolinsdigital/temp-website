@@ -19,7 +19,7 @@ const AnchorStyled = styled.a(({ isActive, theme, hoverColor }) => {
     ':hover': {
       color: selectedHoverColor
     }
-  }
+  };
 });
 
 export default AnchorStyled;
