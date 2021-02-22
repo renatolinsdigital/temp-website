@@ -12,7 +12,7 @@ function AppFooter() {
         <MenuStyled.List>
 
           <MenuStyled.Item hasIcon>
-            <Link
+            <Link hoverColor="primary"
               location="https://github.com/renatolinsdigital"
               isOpeningInNewTab
             >
@@ -21,7 +21,7 @@ function AppFooter() {
           </MenuStyled.Item >
 
           <MenuStyled.Item hasIcon>
-            <Link
+            <Link hoverColor="secondary"
               location="https://www.linkedin.com/in/renatolinsdigital"
               isOpeningInNewTab
             >
@@ -30,7 +30,7 @@ function AppFooter() {
           </MenuStyled.Item >
 
           <MenuStyled.Item hasIcon>
-            <Link
+            <Link hoverColor="tertiary"
               location="."
             >
               <AndroidIcon />

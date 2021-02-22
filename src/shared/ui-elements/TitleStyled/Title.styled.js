@@ -3,7 +3,14 @@ import { getColorByNumber } from '../../HelperMethods';
 
 const TitleStyled = styled.h1(({ theme, colorOption }) => {
 
-  const selectedColor = getColorByNumber(theme, colorOption);
+  const { isDarkMode } = theme.colors;
+
+  const selectedColor = isDarkMode
+    ? getColorByNumber(theme, colorOption)
+    : theme.colors.dark;
+  
+  const darkModeColor = colorOption === 'tertiary' ? theme.colors.dark : theme.colors.text;
+  const lightModeColor = theme.colors.white;
 
   return {
     width: '100%',
@@ -14,7 +21,7 @@ const TitleStyled = styled.h1(({ theme, colorOption }) => {
     fontFamily: theme.fontFamilies.heading1,
     fontSize: theme.fontSizes.small,
     textTransform: 'uppercase',
-    color: colorOption === 'tertiary' ? theme.colors.dark : theme.colors.text
+    color: isDarkMode ? darkModeColor : lightModeColor
   }
 });
 

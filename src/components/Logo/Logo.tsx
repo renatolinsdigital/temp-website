@@ -22,7 +22,7 @@ const LogoStyled = styled.svg(({ theme }) => {
 
   return {
     'path': {
-      fill: quaternary
+      fill: theme.colors.dark
     }
   }
 });
