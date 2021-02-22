@@ -49,14 +49,14 @@ function MainContent() {
 
             <MenuStyled.Item hoverColor="secondary">
               <Link
-                location="https://github.com/renatolinsdigital/bank-api-node"
+                location="https://www.linkedin.com/pulse/styled-components-em-projetos-baseados-react-web-vs-mobile-lins"
                 label="Styled components thoughts" isOpeningInNewTab
               />
             </MenuStyled.Item >
 
             <MenuStyled.Item hoverColor="secondary">
               <Link
-                location="https://github.com/renatolinsdigital/bank-api-node"
+                location="https://whimsical.com/fullstack-javascript-developer-by-renato-lins-QP6S7CS2Var5G9wzBCg2jF"
                 label="Fullstack Roadmap" isOpeningInNewTab
               />
             </MenuStyled.Item >
