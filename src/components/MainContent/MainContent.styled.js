@@ -3,7 +3,6 @@ import { FlexContainer } from '../../shared/containers/index.js';
 
 const MainContentStyled = styled.main(() => ({
   ...FlexContainer,
-  margin: '0 auto',
   padding: '30px 0',
   justifyContent: 'center'
 }));

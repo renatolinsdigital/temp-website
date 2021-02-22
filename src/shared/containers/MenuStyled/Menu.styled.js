@@ -12,6 +12,7 @@ MenuStyled.List = styled.ul(({ isVertical }) => (
   {
     display: 'flex',
     width: '100%',
+    justifyContent: 'center',
     flexDirection: isVertical ? 'column' : 'row',
     'li': {
       margin: isVertical ? '8px 0' : '0 20px'
@@ -19,17 +20,17 @@ MenuStyled.List = styled.ul(({ isVertical }) => (
   }
 ));
 
-MenuStyled.Item = styled.li(({ theme, hoverColor }) => {
+MenuStyled.Item = styled.li(({ theme, hoverColor, hasIcon }) => {
   const selectedHoverColor = getColorByNumber(theme, hoverColor);
 
   return {
     display: 'flex',
     textDecoration: 'none',
     listStyleType: 'none',
-    borderLeft: `5px solid ${theme.colors.transparent}`,
+    borderLeft: !hasIcon ? `5px solid ${theme.colors.transparent}` : null,
     transition: 'all .2s ease',
     ':hover': {
-      borderLeftColor: selectedHoverColor
+      borderLeftColor: selectedHoverColor || null
     }
   }
 });
