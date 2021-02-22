@@ -1,5 +1,5 @@
 import React from 'react';
-import MainContentStyled from './MainContent.styled';
+import MainContentStyled from './MainContent.styled.js';
 import { Logo } from '..';
 import { TitleStyled } from '../../shared/ui-elements';
 import { Link } from '../../shared/utilities';

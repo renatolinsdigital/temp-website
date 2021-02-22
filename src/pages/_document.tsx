@@ -1,6 +1,7 @@
 import React from 'react';
 import Document, { DocumentContext } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
+import flush from 'styled-jsx/server';
 
 export default class MyDocument extends Document {
   static async getInitialProps(ctx: DocumentContext): Promise<{
@@ -25,6 +26,7 @@ export default class MyDocument extends Document {
           <>
             {initialProps.styles}
             {sheet.getStyleElement()}
+            {flush() || null}
           </>
         ),
       };

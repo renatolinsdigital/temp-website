@@ -5,7 +5,7 @@ import {
   MainContent, AppFooter
 } from '../components';
 
-export default function Home(): JSX.Element {
+function Home(): JSX.Element {
   return (
     <AppContainerStyled>
       <AppHeader />
@@ -14,3 +14,5 @@ export default function Home(): JSX.Element {
     </AppContainerStyled>
   );
 }
+
+export default Home;

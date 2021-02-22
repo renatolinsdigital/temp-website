@@ -1,5 +1,5 @@
 import React from 'react';
-import AppHeaderStyled from './AppHeader.styled';
+import AppHeaderStyled from './AppHeader.styled.js';
 
 function AppHeader(): JSX.Element {
   return (

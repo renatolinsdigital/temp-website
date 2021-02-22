@@ -1,4 +1,4 @@
-import { VisualIdentityColors } from './../../models';
+import { VisualIdentityColors } from '../../models';
 
 interface LinkProps {
   location: string;
