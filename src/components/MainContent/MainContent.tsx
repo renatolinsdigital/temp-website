@@ -1,18 +1,69 @@
 import MainContentStyled from './MainContent.styled.js';
 import { Logo } from '../../components/index.js';
 import { TitleStyled } from '../../shared/ui-elements/index.js';
-import { AnchorStyled } from '../../shared/utilities/index.js';
+import { Link, AnchorStyled } from '../../shared/utilities/index.js';
+import { MenuStyled } from '../../shared/containers/index.js';
 
 function MainContent() {
   return (
     <MainContentStyled>
       <MainContentStyled.Grid>
         <Logo />
-        <TitleStyled colorOption={1}>
+        <TitleStyled colorOption="primary">
           Latest Projects
         </TitleStyled>
-        <AnchorStyled>Vanilla Javascript SPA</AnchorStyled>
-        <AnchorStyled>API with CRUD functionallity</AnchorStyled>
+
+        <MenuStyled>
+          <MenuStyled.List isVertical>
+
+            <MenuStyled.Item hoverColor="primary">
+              <Link
+                location="https://github.com/renatolinsdigital/bank-api-node"
+                label="Node.js REST API" isOpeningInNewTab
+              />
+            </MenuStyled.Item >
+
+            <MenuStyled.Item hoverColor="primary">
+              <Link
+                location="https://github.com/renatolinsdigital/vanilla-js-spa"
+                label="Vanilla Javascript SPA" isOpeningInNewTab
+              />
+            </MenuStyled.Item >
+
+            <MenuStyled.Item hoverColor="primary">
+              <Link
+                location="https://github.com/renatolinsdigital/dweeb-fight-react"
+                label="RPG fighting mini-game" isOpeningInNewTab
+              />
+            </MenuStyled.Item >
+
+          </MenuStyled.List>
+        </MenuStyled>
+
+        <TitleStyled colorOption="secondary">
+          Recent activity
+        </TitleStyled>
+
+        <MenuStyled>
+          <MenuStyled.List isVertical>
+
+            <MenuStyled.Item hoverColor="secondary">
+              <Link
+                location="https://github.com/renatolinsdigital/bank-api-node"
+                label="Styled components thoughts" isOpeningInNewTab
+              />
+            </MenuStyled.Item >
+
+            <MenuStyled.Item hoverColor="secondary">
+              <Link
+                location="https://github.com/renatolinsdigital/bank-api-node"
+                label="Fullstack Roadmap" isOpeningInNewTab
+              />
+            </MenuStyled.Item >
+
+          </MenuStyled.List>
+        </MenuStyled>
+
       </MainContentStyled.Grid>
     </MainContentStyled>
   )

@@ -1,26 +1,20 @@
 import styled from 'styled-components';
+import { getColorByNumber } from '../../HelperMethods';
 
 const TitleStyled = styled.h1(({ theme, colorOption }) => {
-  const { primary, secondary, tertiary, quaternary } = theme.colors;
-  const availableColors = {
-    1: primary,
-    2: secondary,
-    3: tertiary
-  };
 
-  const selectedColor = colorOption && availableColors[colorOption]
-    ? availableColors[colorOption]
-    : quaternary;
+  const selectedColor = getColorByNumber(theme, colorOption);
 
   return {
     width: '100%',
     display: 'flex',
     backgroundColor: selectedColor,
-    padding: '5px 10px',
+    margin: '15px 0 5px',
+    padding: '4px 10px',
     fontFamily: theme.fontFamilies.heading1,
     fontSize: theme.fontSizes.small,
     textTransform: 'uppercase',
-    color: colorOption === 3 ? theme.colors.dark : theme.colors.text
+    color: colorOption === 'tertiary' ? theme.colors.dark : theme.colors.text
   }
 });
 

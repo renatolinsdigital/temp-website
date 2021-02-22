@@ -1,2 +1,2 @@
-export { default as NextLink } from './NextLink/NextLink.js';
+export { default as Link } from './Link/Link';
 export { default as AnchorStyled } from './AnchorStyled/Anchor.styled.js';

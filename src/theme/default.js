@@ -9,6 +9,7 @@ const visualIdentityColors = {
 }
 
 const neutralColors = {
+  transparent: 'transparent',
   white: '#FFFFFF',
   dark: '#1d1f21',
   black: '#000000'
