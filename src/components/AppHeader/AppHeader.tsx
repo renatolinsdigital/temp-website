@@ -1,4 +1,4 @@
-import AppHeaderStyled from './AppHeader.styled.js';
+import AppHeaderStyled from './AppHeader.styled';
 
 function AppHeader() {
   return (

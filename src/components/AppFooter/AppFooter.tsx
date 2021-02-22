@@ -1,4 +1,4 @@
-import AppFooterStyled from './AppFooter.styled.js';
+import AppFooterStyled from './AppFooter.styled';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import AndroidIcon from '@material-ui/icons/Android';
