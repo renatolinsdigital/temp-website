@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { FlexContainer } from '../../shared/containers';
+import { FlexContainer } from '../../shared/containers/index.js';
 
 const AppHeaderStyled = styled.header(() => {
   return {
