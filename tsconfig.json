@@ -11,6 +11,7 @@
     "allowJs": false,
     "checkJs": false,
     "noEmit": true,
+    "noImplicitAny": false,
     "strict": true,
     "allowSyntheticDefaultImports": true,
     "skipLibCheck": true,

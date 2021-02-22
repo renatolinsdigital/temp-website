@@ -1,5 +1,3 @@
-import { JSXElementConstructor } from "react";
-
 interface LinkProps {
   location: string;
   label: string;

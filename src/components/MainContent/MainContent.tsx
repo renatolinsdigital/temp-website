@@ -1,8 +1,8 @@
 import MainContentStyled from './MainContent.styled';
 import { Logo } from '../../components/index.js';
-import { TitleStyled } from '../../shared/ui-elements/index.js';
+import { TitleStyled } from '../../shared/ui-elements';
 import { Link } from '../../shared/utilities/index.js';
-import { MenuStyled } from '../../shared/containers/index.js';
+import { MenuStyled } from '../../shared/containers';
 
 function MainContent() {
   return (

@@ -7,8 +7,7 @@ import '../global-styles/index.scss';
 
 export default function App({ Component, pageProps }: AppProps) {
 
-  // const { value } = useDarkMode(false, { storageKey: undefined, onChange: undefined });
-  const value = true;
+  const { value } = useDarkMode(true, { storageKey: undefined, onChange: undefined });
   const theme = value ? darkTheme : lightTheme;
 
   return (

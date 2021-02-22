@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { FlexContainer } from '../../shared/containers/index.js';
+import { FlexContainer } from '../../shared/containers';
 
 const MainContentStyled = styled.main(() => ({
   ...FlexContainer,
