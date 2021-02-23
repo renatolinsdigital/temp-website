@@ -2,19 +2,20 @@
 import React from 'react';
 import { AppProps } from 'next/app';
 import { ThemeProvider, createGlobalStyle } from 'styled-components';
-import { defaultTheme, lightModeColors, darkModeColors } from '../theme/default.js';
+import { defaultTheme, lightVariantColors, darkVariantColors } from '../theme';
 import useDarkMode from 'use-dark-mode';
 import globalStyles from '../global-styles/index.scss';
+import { Theme } from './../theme/models';
 
 const GlobalStyle = createGlobalStyle`${globalStyles}`;
 
 export default function App({ Component, pageProps }: AppProps): JSX.Element {
   const { value } = useDarkMode(true, { storageKey: undefined, onChange: undefined });
 
-  const theme = {
+  const theme: Theme = {
+    isInDarkMode: value,
     ...defaultTheme,
-    ...{ isInDarkMode: value },
-    themeColors: value ? darkModeColors : lightModeColors
+    variantColors: value ? darkVariantColors : lightVariantColors
   };
 
   return (

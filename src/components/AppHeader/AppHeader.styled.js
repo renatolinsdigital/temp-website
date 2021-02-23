@@ -11,10 +11,10 @@ const AppHeaderStyled = styled.header(() => {
 });
 
 AppHeaderStyled.Content = styled.span(({ theme }) => {
-  const { themeColors, fontSizes } = theme;
+  const { variantColors, fontSizes } = theme;
   return {
     padding: '5px 10px',
-    color: themeColors.text,
+    color: variantColors.text,
     textTransform: 'uppercase',
     fontSize: fontSizes.smallest
   };

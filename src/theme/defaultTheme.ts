@@ -1,14 +1,13 @@
-import lightColors from './lightColors.js';
-import darkColors from './darkColors.js';
+import { VisualIdentityColors, NeutralColors, Theme } from './models';
 
-const visualIdentityColors = {
+const visualIdentityColors: VisualIdentityColors = {
   primary: '#ee2d30',
   secondary: '#0085cb',
   tertiary: '#f7ec29',
   quaternary: '#8d8d8d'
 };
 
-const neutralColors = {
+const neutralColors: NeutralColors = {
   transparent: 'transparent',
   white: '#FFFFFF',
   neutralBlue: '#eaf1f4',
@@ -16,13 +15,14 @@ const neutralColors = {
   black: '#000000'
 };
 
-const defaultColors = { ...visualIdentityColors, ...neutralColors };
+const defaultColors:
+  VisualIdentityColors
+  & NeutralColors = {
+  ...visualIdentityColors,
+  ...neutralColors
+};
 
-const lightModeColors = { isDarkMode: false, ...lightColors };
-
-const darkModeColors = { isDarkMode: true, ...darkColors };
-
-const defaultTheme = {
+const defaultTheme: Theme = {
   colors: {
     ...defaultColors
   },
@@ -39,11 +39,11 @@ const defaultTheme = {
       '"TitilliumWeb SemiBold"',
       'sans-serif'
     ],
-    uiElements: [
+    link: [
       '"TitilliumWeb SemiBold"',
       'sans-serif'
     ],
-    link: [
+    uiElements: [
       '"TitilliumWeb SemiBold"',
       'sans-serif'
     ]
@@ -52,7 +52,7 @@ const defaultTheme = {
     smallest: 12,
     small: 14,
     default: 16,
-    larg: 18,
+    large: 18,
     extraLarge: 22,
     huge: 24,
     jumbo: 32,
@@ -65,12 +65,9 @@ const defaultTheme = {
   },
   lineHeights: {
     body: 1.5,
-    heading: 1.3,
+    headings: 1.3,
     code: 1.6,
   },
 };
 
-
-export { defaultTheme, lightModeColors, darkModeColors };
-
-
+export default defaultTheme;

@@ -5,9 +5,10 @@ This is the temporary version of my Website. Below there are some project´s con
 ## File extensions
 
  * React components should always have __.tsx__ extension, as it represents Typescript with JSX. Other Typescript files, should be named with just __.ts__
- * Every interface should have the extension __.model.js__
- * Every styled component should include __styled__ on it´s name, and also have the __.js__ extension, as there is no intention to type styles at this moment. Ex: ```AppContainer.styled.js```
+ * Every interface should have the extension __.model.ts__
+ * Every styled component should include __styled__ on it´s name, and also have the __.ts__ extension
  * Every enum should have the extension __.enum.ts__
+ * In certain justified scenarios, styled components can have __.ts__ extension (without type check), but the idea is to have everything properly typed
 
 ## Module resolution
 
@@ -34,10 +35,10 @@ At this time, this project is importing React everywhere it is being used, even 
 
 ## Theming
 
-Every single component with text or colors is using theme properties. It meanings that once theme is injected within styled components, we can theme every component with properties like these:
+Every single component with text or colors is using theme properties. It meanings that once the theme is injected within styled components, we can use theme properties like so:
 
 ```
-const { fontFamilies, colors, themeColors, fontSizes, lineHeights } = theme;
+const { fontFamilies, colors, variantColors, fontSizes, lineHeights } = theme;
 ```
-That being said, we wil diferentiate between theme default colors (colors) and colors that can be switched per theme basis (themeColors). Each of these properties are already setup and injected with this in mind.
+That being said, we wil diferentiate between theme default colors (colors) and colors that might vary within the theme (variantColors), for example, when using dark mode. Theme properties are already setup, typed and injected with this idea in mind.
 

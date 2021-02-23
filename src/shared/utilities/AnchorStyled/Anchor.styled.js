@@ -2,11 +2,11 @@ import styled from 'styled-components';
 import { getColorByNumber } from '../../HelperMethods';
 
 const AnchorStyled = styled.a(({ isActive, theme, hoverColor }) => {
-  const { themeColors } = theme;
+  const { variantColors } = theme;
   
   const selectedHoverColor = hoverColor
     ? getColorByNumber(theme, hoverColor)
-    : themeColors.textBold;
+    : variantColors.textBold;
   
   return {
     cursor: 'pointer',
@@ -16,8 +16,8 @@ const AnchorStyled = styled.a(({ isActive, theme, hoverColor }) => {
     padding: '0 10px',
     display: 'flex',
     color: isActive
-      ? themeColors.textBold
-      : themeColors.text,
+      ? variantColors.textBold
+      : variantColors.text,
     ':hover': {
       color: selectedHoverColor
     }

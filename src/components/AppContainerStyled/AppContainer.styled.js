@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 const AppContainerStyled = styled.div(({ theme }) => {
-  const { fontFamilies, themeColors, fontSizes, lineHeights } = theme;
+  const { fontFamilies, variantColors, fontSizes, lineHeights } = theme;
 
   return {
     display: 'grid',
@@ -15,8 +15,8 @@ const AppContainerStyled = styled.div(({ theme }) => {
     fontFamily: fontFamilies.body.join(','),
     fontSize: fontSizes.default,
     lineHeight: lineHeights.body,
-    backgroundColor: themeColors.appBackGround,
-    color: themeColors.text
+    backgroundColor: variantColors.appBackGround,
+    color: variantColors.text
   };
 });
 

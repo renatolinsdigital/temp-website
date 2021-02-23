@@ -3,13 +3,15 @@ import { getColorByNumber } from '../../HelperMethods';
 
 const TitleStyled = styled.h1(({ theme, colorOption }) => {
 
-  const { isInDarkMode, colors, themeColors, fontFamilies, fontSizes } = theme;
+  const { isInDarkMode, colors, variantColors, fontFamilies, fontSizes } = theme;
 
   const selectedColor = isInDarkMode
     ? getColorByNumber(theme, colorOption)
     : theme.colors.dark;
   
-  const darkModeColor = colorOption === 'tertiary' ? colors.dark : themeColors.text;
+  const darkModeColor = colorOption === 'tertiary'
+    ? colors.dark
+    : variantColors.text;
   const lightModeColor = colors.white;
 
   return {
