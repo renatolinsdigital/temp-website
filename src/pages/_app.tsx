@@ -9,7 +9,7 @@ import { Theme } from './../theme/models';
 
 const GlobalStyle = createGlobalStyle`${globalStyles}`;
 
-export default function App({ Component, pageProps }: AppProps): JSX.Element {
+export default function App({ Component, pageProps }: AppProps) {
   const { value } = useDarkMode(true, { storageKey: undefined, onChange: undefined });
 
   const theme: Theme = {

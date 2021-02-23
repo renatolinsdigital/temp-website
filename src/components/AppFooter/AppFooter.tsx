@@ -6,7 +6,7 @@ import { MenuStyled } from '../../shared/containers';
 import { Link } from '../../shared/utilities';
 import AppFooterStyled from './AppFooter.styled.js';
 
-function AppFooter(): JSX.Element {
+function AppFooter() {
   return (
     <AppFooterStyled>
       <MenuStyled>

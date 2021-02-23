@@ -5,7 +5,7 @@ import { TitleStyled } from '../../shared/ui-elements';
 import { Link } from '../../shared/utilities';
 import { MenuStyled } from '../../shared/containers';
 
-function MainContent(): JSX.Element {
+function MainContent() {
   return (
     <MainContentStyled>
       <MainContentStyled.Grid>

@@ -1,7 +1,7 @@
 import React from 'react';
 import AppHeaderStyled from './AppHeader.styled.js';
 
-function AppHeader(): JSX.Element {
+function AppHeader() {
   return (
     <AppHeaderStyled>
       <AppHeaderStyled.Content>

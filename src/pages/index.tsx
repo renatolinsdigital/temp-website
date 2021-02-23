@@ -5,7 +5,7 @@ import {
   AppHeader, MainContent, AppFooter
 } from '../components';
 
-function Home(): JSX.Element {
+function Home() {
   return (
     <AppContainerStyled>
       <AppHeader />
