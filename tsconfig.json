@@ -12,7 +12,7 @@
     "checkJs": false,
     "noEmit": true,
     "noImplicitAny": false,
-    "strict": true,
+    "strict": false,
     "allowSyntheticDefaultImports": true,
     "skipLibCheck": true,
     "noUnusedLocals": true,
@@ -33,5 +33,6 @@
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx" ]
+    "**/*.tsx"
+  ]
 }

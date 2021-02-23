@@ -31,3 +31,13 @@ export { default as AppContainerStyled } from './AppContainerStyled/AppContainer
 ## Importing React
 
 At this time, this project is importing React everywhere it is being used, even considering that Next.js is injecting it.
+
+## Theming
+
+Every single component with text or colors is using theme properties. It meanings that once theme is injected within styled components, we can theme every component with properties like these:
+
+```
+const { fontFamilies, colors, themeColors, fontSizes, lineHeights } = theme;
+```
+That being said, we wil diferentiate between theme default colors (colors) and colors that can be switched per theme basis (themeColors). Each of these properties are already setup and injected with this in mind.
+

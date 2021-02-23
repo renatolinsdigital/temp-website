@@ -2,9 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 
 const LogoStyled = styled.svg(({ theme }) => {
-  const { primary, secondary, tertiary, quaternary, isDarkMode } = theme.colors;
+  const { primary, secondary, tertiary, quaternary } = theme.colors;
 
-  if (isDarkMode) {
+  if (theme.isInDarkMode) {
     return {
       '#primary': {
         fill: primary

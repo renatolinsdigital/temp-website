@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 
 const AppContainerStyled = styled.div(({ theme }) => {
-  const { fontFamilies, colors, fontSizes, lineHeights } = theme;
+  const { fontFamilies, themeColors, fontSizes, lineHeights } = theme;
+
   return {
     display: 'grid',
     minHeight: '100%',
@@ -12,10 +13,10 @@ const AppContainerStyled = styled.div(({ theme }) => {
     gridAutoRows: 'min-content 1fr min-content',
 
     fontFamily: fontFamilies.body.join(','),
-    backgroundColor: colors.appBackGround,
-    color: colors.text,
     fontSize: fontSizes.default,
-    lineHeight: lineHeights.body
+    lineHeight: lineHeights.body,
+    backgroundColor: themeColors.appBackGround,
+    color: themeColors.text
   };
 });
 

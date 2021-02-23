@@ -18,15 +18,14 @@ const neutralColors = {
 
 const defaultColors = { ...visualIdentityColors, ...neutralColors };
 
-const lightModeColors = {
-  colors: { isDarkMode: false, ...defaultColors, ...lightColors }
-};
+const lightModeColors = { isDarkMode: false, ...lightColors };
 
-const darkModeColors = {
-  colors: { isDarkMode: true, ...defaultColors, ...darkColors }
-};
+const darkModeColors = { isDarkMode: true, ...darkColors };
 
 const defaultTheme = {
+  colors: {
+    ...defaultColors
+  },
   fontFamilies: {
     body: [
       '"TitilliumWeb Regular"',
@@ -71,9 +70,7 @@ const defaultTheme = {
   },
 };
 
-const lightTheme = { ...defaultTheme, ...lightModeColors };
-const darkTheme = { ...defaultTheme, ...darkModeColors };
 
-export { lightTheme, darkTheme };
+export { defaultTheme, lightModeColors, darkModeColors };
 
 
