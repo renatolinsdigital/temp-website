@@ -1,12 +1,12 @@
 import styled from 'styled-components';
-import { getColorByNumber } from '../../HelperMethods';
+import { getColorByOption } from '../../HelperMethods';
 
 const TitleStyled = styled.h1(({ theme, colorOption }) => {
 
   const { isInDarkMode, colors, variantColors, fontFamilies, fontSizes } = theme;
 
   const selectedColor = isInDarkMode
-    ? getColorByNumber(theme, colorOption)
+    ? getColorByOption(theme, colorOption)
     : theme.colors.dark;
   
   const darkModeColor = colorOption === 'tertiary'

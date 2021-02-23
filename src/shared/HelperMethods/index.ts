@@ -1,1 +1,1 @@
-export { default as getColorByNumber } from './getColorByNumber';
+export { default as getColorByOption } from './getColorByOption';

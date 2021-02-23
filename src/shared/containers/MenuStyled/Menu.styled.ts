@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { getColorByNumber } from '../../HelperMethods';
+import { getColorByOption } from '../../HelperMethods';
 import StyledProps from '../../models/StyledProps.model';
 import {
   MenuStyledType, MenuListStyled,
@@ -29,7 +29,7 @@ MenuStyled.List = styled.ul(
 
 MenuStyled.Item = styled.li(
   ({ hasIcon, hoverColor, theme }: StyledProps & ItemStyledProps): MenuItemStyled => {
-    const selectedHoverColor = getColorByNumber(theme, hoverColor);
+    const selectedHoverColor = getColorByOption(theme, hoverColor);
 
     return {
       display: 'flex',

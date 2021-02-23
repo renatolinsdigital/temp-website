@@ -1,13 +1,13 @@
 import styled from 'styled-components';
-import { getColorByNumber } from '../../HelperMethods';
+import { getColorByOption } from '../../HelperMethods';
 
 const AnchorStyled = styled.a(({ isActive, theme, hoverColor }) => {
   const { variantColors } = theme;
   
   const selectedHoverColor = hoverColor
-    ? getColorByNumber(theme, hoverColor)
+    ? getColorByOption(theme, hoverColor)
     : variantColors.textBold;
-  
+
   return {
     cursor: 'pointer',
     transition: '.2s all ease',
