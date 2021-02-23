@@ -1,11 +1,12 @@
-import { VisualIdentityColors } from '../../models';
+import { VisualIdentityColors } from "../../../theme/models";
+import { ChildrenElement } from "../../models";
 
 interface LinkProps {
   location: string;
   label?: string;
   isOpeningInNewTab?: boolean;
-  children?: JSX.Element | HTMLElement;
-  hoverColor?: VisualIdentityColors
+  children?: ChildrenElement;
+  hoverColor?: VisualIdentityColors;
 }
 
 export default LinkProps;

@@ -1,5 +1,6 @@
 import styled from 'styled-components';
-import { getColorByNumber } from './../../HelperMethods';
+import { getColorByNumber } from '../../HelperMethods';
+// import StyledProps from '../../models/StyledProps.model';
 
 const MenuStyled = styled.nav(() => (
   {

@@ -1,9 +1,8 @@
 import Theme from './../../theme/models/Theme.model';
-
-type children = JSX.Element | Element;
+import ChildrenElement from './ChildrenElement.model';
 
 type DynamicStyledProps = {
-  [key: string]: string | number | boolean | children;
+  [key: string]: string | number | boolean | ChildrenElement;
 }
 
 interface ThemeInjected {
