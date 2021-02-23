@@ -8,7 +8,14 @@ This is the temporary version of my Website. Below there are some project´s con
  * Every interface should have the extension __.model.ts__
  * Every styled component should include __styled__ on it´s name, and also have the __.ts__ extension
  * Every enum should have the extension __.enum.ts__
+ * Every model applied to styled components only, shoud have the extension __.styled.model.ts__
  * In certain justified scenarios, styled components can have __.ts__ extension (without type check), but the idea is to have everything properly typed
+
+## Imports/exports
+
+* Every group of resource (components, models, styles, etc) should have an entry point, an __index__ file re-exporting the entire gorup
+* Imports within the __shared__ fold should always be relative, as it can become a library in the future
+* Imports ocurring outside the __shared__ folder should be absolute, as it is better for readability and organization
 
 ## Module resolution
 
@@ -27,7 +34,7 @@ declare module '*.scss';
 export { default as AppContainerStyled } from './AppContainerStyled/AppContainer.styled.js';
 ```
 
-* 3 - Every __index__ file (entry point for re-exporting modules) should have the __.ts__ extension. This will help on module importation, and also on identificating the type of file
+* 3 - Every __index__ file should have the __.ts__ extension. This will help on module importation, and also on identificating the type of file
 
 ## Importing React
 
