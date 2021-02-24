@@ -1,20 +1,21 @@
 import styled from 'styled-components';
-import { getColorByOption } from '../../HelperMethods';
+import { getColorByOption } from '../../helper-methods';
 
 const AnchorStyled = styled.a(({ isActive, theme, hoverColor }) => {
   const { variantColors } = theme;
-  
+
   const selectedHoverColor = hoverColor
     ? getColorByOption(theme, hoverColor)
     : variantColors.textBold;
 
   return {
-    cursor: 'pointer',
-    transition: '.2s all ease',
-    lineHeight: 1.5,
+    display: 'flex',
     width: '100%',
     padding: '0 10px',
-    display: 'flex',
+    cursor: 'pointer',
+    transition: '.2s all ease',
+    lineHeight: theme.lineHeights.body,
+
     color: isActive
       ? variantColors.textBold
       : variantColors.text,

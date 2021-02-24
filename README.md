@@ -52,9 +52,10 @@ At this time, this project is importing React everywhere it is being used, even 
 A few practices for components creation and handling are:
 
 * __Everything we see in screen must be a component, either from React or Styled Components__. This will ensure a lot of benefits like theme or design systems adherence, testability, maintainability, shareability, composition over inheritance, clean coding, etc. No loose elements with a ```className``` should be placed in this project
+* Components based on Styled components should use Javascript syntax over Sass syntax. This brings a cleaner syntax for components using ```props``` + conditional styling, and makes styling more similar to platforms outside the Browser (ex. React Native)
 * Desconstruct props in arguments. Ex: ```MyComponent({prop1, prop2}: MyProps){}```
 * Avoid business logic directly inside components(including domain specific components) as dummy components are way easier to test. Instead, try and move business logic to a custom hook
-* Within components that are purely a __styled component__, prefer extending interfaces and implementing them, instead of extending components. This might bring a good level of consistency without coupling components
+* As long as this project uses a Javascript syntax on styled components, we can extend styles very easily, by simply creating a Javascript object to be merged within other styled components. We can also extend props by joining props interfaces with __&__ whenever necessary
 * Both components based on React or styled components should be typed so we can see warnings if not passing props correctly
 
 ## Theming

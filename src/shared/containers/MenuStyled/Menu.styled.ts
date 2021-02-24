@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { getColorByOption } from '../../HelperMethods';
+import { getColorByOption } from '../../helper-methods';
 import { CssInJs, StyledProps } from '../../models';
 import {
   MenuContainerStyled,

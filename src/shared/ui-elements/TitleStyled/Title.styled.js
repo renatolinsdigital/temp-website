@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { getColorByOption } from '../../HelperMethods';
+import { getColorByOption } from '../../helper-methods';
 
 const TitleStyled = styled.h1(({ theme, colorOption }) => {
 

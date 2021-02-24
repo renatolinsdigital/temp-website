@@ -1,5 +1,4 @@
-import { Theme } from "../../theme/models";
-import { VisualIdentityColorsOptions } from "../models";
+import { Theme, VisualIdentityColorsOptions } from "../../theme/models";
 
 const getColorByOption = (
   theme: Theme,
