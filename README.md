@@ -1,16 +1,23 @@
 # Renato Lins Website
 
-This is the temporary version of my Website. Below there are some project´s considerations:
+This is the temporary version of my Website. Below there are some project´s conventions:
 
 ## File extensions
 
- * React components should always have __.tsx__ extension, as it represents Typescript with JSX. Other Typescript files, should be named with just __.ts__
- * Every interface should have the extension __.model.ts__
- * Every styled component should include __styled__ on it´s name, and also have the __.ts__ extension
- * Every enum should have the extension __.enum.ts__
- * Every model applied to styled components only, shoud have the extension __.styled.model.ts__
- * In certain justified scenarios, styled components can have __.ts__ extension (without type check), but the idea is to have everything properly typed
+* React components should always have __.tsx__ extension, as it represents Typescript with JSX. Other Typescript files, should be named with just __.ts__
+* Every interface should have the extension __.model.ts__
+* Every styled component should include __styled__ on it´s name, and also have the __.ts__ extension
+* Every enum should have the extension __.enum.ts__
+* Every model applied to styled components only, shoud have the extension __.styled.model.ts__
+* In certain justified scenarios, styled components can have __.ts__ extension (without type check), but the idea is to have everything properly typed
 
+## Naming conventions
+
+* Every React component should be named in upper camel case, as well as the folder containing it. Ex: ```MyComponent -> MyComponent.ts```
+* Every Styled components component folder should be named in upper camel case, followed by the suffix __Styled__. The component itself, shoube be named in uppper camel case, having the extension mentioned above. Ex: ```MyComponentStyled -> MyComponent.styled.ts```
+* Every folder that does not hold a self-contained component (that can be exported/imported) should be named in slug case. Ex: ```pages```, ```models```, ```containers```, etc.
+* Every Model(Interfaces, enums, etc) should be named in upper camel case, having the extension mentioned above. Ex: ```MyComponent.model.ts```, ```MyValues.enum.ts```
+  
 ## Imports/exports
 
 * Every group of resource (components, models, styles, etc) should have an entry point, an __index__ file re-exporting the entire gorup
@@ -42,17 +49,15 @@ At this time, this project is importing React everywhere it is being used, even 
 
 ## Components
 
-A few practices for components creation are:
+A few practices for components creation and handling are:
 
+* __Everything we see in screen must be a component, either from React or Styled Components__. This will ensure a lot of benefits like theme or design systems adherence, testability, maintainability, shareability, composition over inheritance, clean coding, etc. No loose elements with a ```className``` should be placed in this project
 * Desconstruct props in arguments. Ex: ```MyComponent({prop1, prop2}: MyProps){}```
 * Avoid business logic directly inside components(including domain specific components) as dummy components are way easier to test. Instead, try and move business logic to a custom hook
+* Within components that are purely a __styled component__, prefer extending interfaces and implementing them, instead of extending components. This might bring a good level of consistency without coupling components
+* Both components based on React or styled components should be typed so we can see warnings if not passing props correctly
 
 ## Theming
 
-Every single component with text or colors is using theme properties. It meanings that once the theme is injected within styled components, we can use theme properties like so:
-
-```
-const { fontFamilies, colors, variantColors, fontSizes, lineHeights } = theme;
-```
-That being said, we wil diferentiate between theme default colors (colors) and colors that might vary within the theme (variantColors), for example, when using dark mode. Theme properties are already setup, typed and injected with this idea in mind.
+Every single component with text or colors is using theme properties. That being said, we wil diferentiate between theme default colors (colors) and colors that might vary within the theme (variantColors), for example, when using dark mode. Theme properties are already setup, typed and injected with this idea in mind.
 

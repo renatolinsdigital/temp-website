@@ -1,9 +1,16 @@
 import { StyledComponent } from "styled-components";
-import { FontSizesOptions } from "../../../theme/models";
-import { CssInJs } from "../../models";
+import { CssInJs, PaddingBoxStyledProps } from "../../models";
+import {
+  FontSizesOptions,
+  FontWeightsOptions,
+  LineHeightsOptions
+} from "../../../theme/models";
 
-interface TextStyledProps {
+
+type TextStyledProps = PaddingBoxStyledProps & {
   isInUpperCase?: boolean;
+  lineHeight?: LineHeightsOptions;
+  fontWeight?: FontWeightsOptions;
   fontSize?: FontSizesOptions;
   isBold?: boolean;
 }

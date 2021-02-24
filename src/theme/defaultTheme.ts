@@ -64,12 +64,11 @@ const defaultTheme: Theme = {
   },
   fontWeights: {
     regular: 400,
-    medium: 500,
     bold: 700,
   },
   lineHeights: {
     body: 1.5,
-    headings: 1.3,
+    heading: 2,
     code: 1.6,
   },
 };

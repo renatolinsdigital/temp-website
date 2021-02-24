@@ -7,9 +7,15 @@ const TextStyled: TextStyledContainer = styled.span((
     theme,
     isInUpperCase,
     fontSize,
-    isBold
+    isBold,
+    lineHeight,
+    fontWeight,
+    paddingTop = 0,
+    paddingBottom = 0,
+    paddingLeft = 0,
+    paddingRight = 0
   }: StyledProps & TextStyledProps): CssInJs => {
-  const { variantColors, fontSizes } = theme;
+  const { variantColors, fontSizes, lineHeights, fontWeights } = theme;
 
   return {
     color: isBold ? variantColors.textBold : variantColors.text,
@@ -17,7 +23,13 @@ const TextStyled: TextStyledContainer = styled.span((
       ? theme.fontFamilies.bodyBold.join(',')
       : theme.fontFamilies.body.join(','),
     textTransform: isInUpperCase ? 'uppercase' : 'none',
-    fontSize: fontSize ? fontSizes[fontSize] : fontSizes.default
+    fontSize: fontSize ? fontSizes[fontSize] : fontSizes.default,
+    lineHeight: lineHeight ? lineHeights[lineHeight] : lineHeights.body,
+    fontWeight: fontWeight ? fontWeights[fontWeight] : fontWeights.regular,
+    paddingTop,
+    paddingBottom,
+    paddingLeft,
+    paddingRight
   };
 });
 

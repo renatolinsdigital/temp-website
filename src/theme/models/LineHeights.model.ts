@@ -1,6 +1,6 @@
 interface LineHeights {
   body: number;
-  headings: number;
+  heading: number;
   code?: number;
 }
 
