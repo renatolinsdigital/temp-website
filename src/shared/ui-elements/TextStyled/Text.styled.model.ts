@@ -1,4 +1,6 @@
+import { StyledComponent } from "styled-components";
 import { FontSizesOptions } from "../../../theme/models";
+import { CssInJs } from "../../models";
 
 interface TextStyledProps {
   isInUpperCase?: boolean;
@@ -6,4 +8,6 @@ interface TextStyledProps {
   isBold?: boolean;
 }
 
-export default TextStyledProps;
+type TextStyledContainer = StyledComponent<"span", CssInJs, TextStyledProps>;
+
+export type { TextStyledProps, TextStyledContainer };

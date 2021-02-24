@@ -10,7 +10,6 @@ const BoxStyled: BoxContainerStyled = styled.div((
     paddingRight = 0
   }: StyledProps & BoxStyledProps): CssInJs => {
 
-  console.log(paddingTop);
   return {
     paddingTop,
     paddingBottom,

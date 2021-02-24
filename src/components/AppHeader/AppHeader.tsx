@@ -6,13 +6,12 @@ import { BoxStyled } from '../../shared/utilities';
 function AppHeader() {
   return (
     <AppHeaderStyled>
-      <BoxStyled paddingRight={5}>
-        <TextStyled
-          isInUpperCase
-          fontSize="smallest">
-          Status:
+      <TextStyled
+        paddingRight={50}
+        isInUpperCase
+        fontSize="smallest">
+        Status:
       </TextStyled>
-      </BoxStyled>
       <BoxStyled>
         <TextStyled
           isInUpperCase

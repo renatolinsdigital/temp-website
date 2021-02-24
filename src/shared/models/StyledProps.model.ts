@@ -1,4 +1,4 @@
-import Theme from './../../theme/models/Theme.model';
+import { Theme } from './../../theme/models';
 import ChildrenElement from './ChildrenElement.model';
 
 type DynamicStyledProps = {

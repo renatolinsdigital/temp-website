@@ -40,6 +40,13 @@ export { default as AppContainerStyled } from './AppContainerStyled/AppContainer
 
 At this time, this project is importing React everywhere it is being used, even considering that Next.js is injecting it.
 
+## Components
+
+A few practices for components creation are:
+
+* Desconstruct props in arguments. Ex: ```MyComponent({prop1, prop2}: MyProps){}```
+* Avoid business logic directly inside components(including domain specific components) as dummy components are way easier to test. Instead, try and move business logic to a custom hook
+
 ## Theming
 
 Every single component with text or colors is using theme properties. It meanings that once the theme is injected within styled components, we can use theme properties like so:
