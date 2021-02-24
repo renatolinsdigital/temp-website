@@ -1,29 +1,25 @@
-/* eslint-disable @typescript-eslint/no-explicit-any */
 import { StyledComponent } from "styled-components";
-import { VisualIdentityColorsOptions } from "../../models";
+import { CssInJs, VisualIdentityColorsOptions } from "../../models";
 
+interface ListStyledProps {
+  isVertical?: boolean;
+}
 
-type MenuListStyled = StyledComponent<"ul", any> & any;
-type MenuItemStyled = StyledComponent<"li", any> & any;
+interface ItemStyledProps {
+  hasIcon?: boolean;
+  hoverColor?: VisualIdentityColorsOptions;
+}
 
-type MenuStyledType = StyledComponent<'nav', any> & {
+type MenuListStyled = StyledComponent<"ul", CssInJs, ListStyledProps>;
+type MenuItemStyled = StyledComponent<"li", CssInJs, ItemStyledProps>;
+
+type MenuContainerStyled = StyledComponent<'nav', CssInJs> & {
   List?: MenuListStyled;
   Item?: MenuItemStyled;
 }
 
-interface ListStyledProps {
-  isVertical: boolean;
-}
-
-interface ItemStyledProps {
-  hasIcon: boolean;
-  hoverColor: VisualIdentityColorsOptions;
-}
-
 export type {
-  MenuStyledType,
-  MenuListStyled,
-  MenuItemStyled,
+  MenuContainerStyled,
   ListStyledProps,
   ItemStyledProps
 };

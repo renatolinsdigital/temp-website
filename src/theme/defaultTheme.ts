@@ -31,6 +31,10 @@ const defaultTheme: Theme = {
       '"TitilliumWeb Regular"',
       'sans-serif'
     ],
+    bodyBold: [
+      '"TitilliumWeb SemiBold"',
+      'sans-serif'
+    ],
     heading1: [
       '"TitilliumWeb Bold"',
       'sans-serif'

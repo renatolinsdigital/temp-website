@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 import { getColorByOption } from '../../HelperMethods';
-import StyledProps from '../../models/StyledProps.model';
+import { CssInJs, StyledProps } from '../../models';
 import {
-  MenuStyledType, MenuListStyled,
-  MenuItemStyled, ListStyledProps,
+  MenuContainerStyled,
+  ListStyledProps,
   ItemStyledProps
 } from './Menu.styled.model';
 
-const MenuStyled: MenuStyledType = styled.nav(() => (
+const MenuStyled: MenuContainerStyled = styled.nav(() => (
   {
     display: 'flex',
     width: '100%'
@@ -15,7 +15,7 @@ const MenuStyled: MenuStyledType = styled.nav(() => (
 ));
 
 MenuStyled.List = styled.ul(
-  ({ isVertical }: StyledProps & ListStyledProps): MenuListStyled => (
+  ({ isVertical }: StyledProps & ListStyledProps): CssInJs => (
     {
       display: 'flex',
       width: '100%',
@@ -28,7 +28,7 @@ MenuStyled.List = styled.ul(
   ));
 
 MenuStyled.Item = styled.li(
-  ({ hasIcon, hoverColor, theme }: StyledProps & ItemStyledProps): MenuItemStyled => {
+  ({ hasIcon, hoverColor, theme }: StyledProps & ItemStyledProps): CssInJs => {
     const selectedHoverColor = getColorByOption(theme, hoverColor);
 
     return {
@@ -38,7 +38,7 @@ MenuStyled.Item = styled.li(
       borderLeft: !hasIcon ? `5px solid ${theme.colors.transparent}` : null,
       transition: 'all .2s ease',
       ':hover': {
-        borderLeftColor: selectedHoverColor || null
+        borderLeftColor: selectedHoverColor
       }
     };
   });

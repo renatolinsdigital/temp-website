@@ -2,7 +2,6 @@ type VisualIdentityColorsOptions =
   'primary'
   | 'secondary'
   | 'tertiary'
-  | 'quaternary'
-  | string;
+  | 'quaternary';
 
 export default VisualIdentityColorsOptions;

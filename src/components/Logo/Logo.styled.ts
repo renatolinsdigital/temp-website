@@ -1,31 +1,32 @@
-import styled from 'styled-components';
-import StyledProps from './../../shared/models/StyledProps.model';
+import styled, { StyledComponent } from 'styled-components';
+import { CssInJs, StyledProps } from '../../shared/models';
 
-const LogoStyled = styled.svg(({ theme }: StyledProps) => {
-  const { primary, secondary, tertiary, quaternary } = theme.colors;
+const LogoStyled: StyledComponent<"svg", CssInJs>
+  = styled.svg(({ theme }: StyledProps): CssInJs => {
+    const { primary, secondary, tertiary, quaternary } = theme.colors;
 
-  if (theme.isInDarkMode) {
+    if (theme.isInDarkMode) {
+      return {
+        '#primary': {
+          fill: primary
+        },
+        '#secondary': {
+          fill: secondary
+        },
+        '#tertiary': {
+          fill: tertiary
+        },
+        '#border': {
+          fill: quaternary
+        }
+      };
+    }
+
     return {
-      '#primary': {
-        fill: primary
-      },
-      '#secondary': {
-        fill: secondary
-      },
-      '#tertiary': {
-        fill: tertiary
-      },
-      '#border': {
-        fill: quaternary
+      'path': {
+        fill: theme.colors.dark
       }
     };
-  }
-
-  return {
-    'path': {
-      fill: theme.colors.dark
-    }
-  };
-});
+  });
 
 export default LogoStyled;
