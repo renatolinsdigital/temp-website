@@ -1,15 +1,27 @@
 import React from 'react';
 import { AnchorStyled } from '../';
-import LinkProps from './Link.model';
+import AnchorProps from '../AnchorStyled/Anchor.styled.model';
 
-function Link({ location, label, isOpeningInNewTab, hoverColor, children }: LinkProps) {
+function Link(
+  {
+    location,
+    label,
+    isOpeningInNewTab,
+    hoverColor,
+    isActive,
+    children
+  }: AnchorProps) {
+
   return (
     <AnchorStyled
       href={`${location}`}
       hoverColor={hoverColor}
+      isActive={isActive}
       target={isOpeningInNewTab ? '_blank' : '_self'}>
-      {label}
-      {children}
+      <>
+        {label}
+        {children}
+      </>
     </AnchorStyled>
   );
 }

@@ -1,7 +1,14 @@
-import styled from 'styled-components';
+import styled, { StyledComponent } from 'styled-components';
 import { getColorByOption } from '../../helper-methods';
+import { CssInJs, StyledProps } from '../../models';
+import AnchorProps from './Anchor.styled.model';
 
-const AnchorStyled = styled.a(({ isActive, theme, hoverColor }) => {
+const AnchorStyled: StyledComponent<"a", CssInJs, StyledProps & AnchorProps> = styled.a((
+  {
+    isActive,
+    theme,
+    hoverColor
+  }: StyledProps & AnchorProps): CssInJs => {
   const { variantColors } = theme;
 
   const selectedHoverColor = hoverColor

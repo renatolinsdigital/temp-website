@@ -1,5 +1,6 @@
 import { StyledComponent } from "styled-components";
-import { CssInJs, VisualIdentityColorsOptions } from "../../models";
+import { VisualIdentityColorsOptions } from "../../../theme/models";
+import { CssInJs } from "../../models";
 
 interface ListStyledProps {
   isVertical?: boolean;

@@ -1,3 +1,3 @@
-type ChildrenElement = JSX.Element | JSX.Element[] | Element;
+type ChildrenElement = JSX.Element;
 
 export default ChildrenElement;
