@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { CssInJs } from "../../models";
+import { CssInJs, StyledProps } from "../../models";
 import { BoxContainerStyled, BoxPropsStyled } from './Box.styled.model';
 
 const BoxStyled: BoxContainerStyled = styled.div((
@@ -11,11 +11,30 @@ const BoxStyled: BoxContainerStyled = styled.div((
     marginTop = 0,
     marginBottom = 0,
     marginLeft = 0,
-    marginRight = 0
-  }: BoxPropsStyled): CssInJs => {
+    marginRight = 0,
+    isVertical = false,
+    mainAxisAlignment,
+    crossAxisAlignment,
+  }: StyledProps & BoxPropsStyled): CssInJs => {
+  const justifyContent
+    = mainAxisAlignment === 'start'
+      ? 'flex-start'
+      : mainAxisAlignment === 'end'
+        ? 'flex-end' : 'center';
+
+  const alignItems
+    = crossAxisAlignment === 'start'
+      ? 'flex-start'
+      : crossAxisAlignment === 'end'
+        ? 'flex-end' : 'center';
 
   return {
     display: 'flex',
+    flexDirection: isVertical ? 'column' : 'row',
+    width: '100%',
+    maxWidth: '100%',
+    justifyContent,
+    alignItems,
     paddingTop,
     paddingBottom,
     paddingLeft,

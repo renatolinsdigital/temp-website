@@ -42,7 +42,6 @@ function AppFooter() {
 
         </MenuStyled.List>
       </ MenuStyled>
-
     </BoxStyled >
   );
 }

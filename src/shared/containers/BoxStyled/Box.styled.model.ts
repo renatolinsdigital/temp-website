@@ -1,10 +1,25 @@
 import { StyledComponent } from "styled-components";
-import { CssInJs, StyledProps } from "../../models";
+import { CssInJs } from "../../models";
 import { PaddingBoxStyledProps, MarginBoxStyledProps } from "../../models";
 
-type BoxContainerStyled
-  = StyledComponent<"div", CssInJs, PaddingBoxStyledProps & MarginBoxStyledProps>;
+interface FlexBoxStyledProps {
+  isVertical?: boolean;
+  hasNotMainAxisAlignment?: boolean;
+  hasNotCrossAxisAlignment?: boolean;
+  mainAxisAlignment?: "start" | "center" | "end";
+  crossAxisAlignment?: "start" | "center" | "end";
+}
 
-type BoxPropsStyled = StyledProps & PaddingBoxStyledProps & MarginBoxStyledProps;
+type BoxContainerStyled
+  = StyledComponent<"div",
+    CssInJs,
+    FlexBoxStyledProps
+    & PaddingBoxStyledProps
+    & MarginBoxStyledProps>;
+
+type BoxPropsStyled
+  = FlexBoxStyledProps
+  & PaddingBoxStyledProps
+  & MarginBoxStyledProps;
 
 export type { BoxContainerStyled, BoxPropsStyled };

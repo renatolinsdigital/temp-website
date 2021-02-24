@@ -1,10 +1,16 @@
 import React from 'react';
-import AppHeaderStyled from './AppHeader.styled';
+import { BoxStyled } from '../../shared/containers';
 import { TextStyled } from '../../shared/ui-elements';
 
 function AppHeader() {
   return (
-    <AppHeaderStyled>
+    <BoxStyled
+      mainAxisAlignment="end"
+      paddingTop={10}
+      paddingRight={15}
+      paddingLeft={15}
+      paddingBottom={10}
+    >
       <TextStyled
         isInUpperCase
         paddingRight={5}
@@ -17,7 +23,7 @@ function AppHeader() {
         fontSize="smallest">
         coding
       </TextStyled>
-    </AppHeaderStyled>
+    </BoxStyled>
   );
 }
 
