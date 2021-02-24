@@ -13,6 +13,7 @@ const BoxStyled: BoxContainerStyled = styled.div((
     marginLeft = 0,
     marginRight = 0,
     isVertical = false,
+    maxWidth,
     mainAxisAlignment,
     crossAxisAlignment,
   }: StyledProps & BoxPropsStyled): CssInJs => {
@@ -32,7 +33,7 @@ const BoxStyled: BoxContainerStyled = styled.div((
     display: 'flex',
     flexDirection: isVertical ? 'column' : 'row',
     width: '100%',
-    maxWidth: '100%',
+    maxWidth: maxWidth ? `${maxWidth}px` : '100%',
     justifyContent,
     alignItems,
     paddingTop,

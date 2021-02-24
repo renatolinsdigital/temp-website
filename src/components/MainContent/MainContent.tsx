@@ -1,15 +1,25 @@
 import React from 'react';
-import MainContentStyled from './MainContent.styled.js';
 import { Logo } from '..';
 import { TitleStyled } from '../../shared/ui-elements';
 import { Link } from '../../shared/utilities';
-import { MenuStyled } from '../../shared/containers';
+import { BoxStyled, MenuStyled } from '../../shared/containers';
 
 function MainContent() {
   return (
-    <MainContentStyled>
-      <MainContentStyled.Grid>
-        <Logo />
+    <BoxStyled
+      paddingTop={30}
+      paddingBottom={30}
+      isVertical
+    >
+      <BoxStyled
+        isVertical
+        maxWidth={220}
+      >
+        <BoxStyled
+          paddingBottom={10}
+        >
+          <Logo />
+        </BoxStyled>
         <TitleStyled colorOption="primary">
           Latest Projects
         </TitleStyled>
@@ -65,8 +75,8 @@ function MainContent() {
           </MenuStyled.List>
         </MenuStyled>
 
-      </MainContentStyled.Grid>
-    </MainContentStyled>
+      </BoxStyled>
+    </BoxStyled>
   );
 }
 
