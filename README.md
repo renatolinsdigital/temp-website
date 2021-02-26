@@ -48,7 +48,7 @@ export { default as AppContainerStyled } from './AppContainerStyled/AppContainer
 ## Components
 
 * __Everything we see in screen must be a component, either from React or from Styled Components__. This will ensure a lot of benefits like theme or design systems adherence, testability, maintainability, shareability, composition over inheritance, clean coding, etc. No loose elements with a ```className``` should be placed in this project
-* Components based on Styled components should use Javascript syntax over Sass syntax. This brings a cleaner syntax for components using ```props``` + conditional styling, and makes styling more similar to platforms outside the Browser (ex. React Native)
+* Components based on Styled components should use Javascript syntax over Sass syntax. This brings a cleaner syntax for components using ```props``` + conditional styling, will allow more patterns and notations, as well as making styling similar to platforms outside the Browser (ex. React Native)
 * Desconstruct props in arguments. Ex: ```MyComponent({prop1, prop2}: MyProps){}```
 * Avoid business logic directly inside components(including domain specific components) as dummy components are way easier to test. Instead, try and move business logic to a custom hook
 * As long as this project uses a Javascript syntax on styled components, we can extend styles very easily, by simply creating a Javascript object to be merged within other styled components. 
