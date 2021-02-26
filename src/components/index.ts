@@ -3,4 +3,4 @@ export { default as AppHeader } from './AppHeader/AppHeader';
 export { default as AppFooter } from './AppFooter/AppFooter';
 export { default as MainContent } from './MainContent/MainContent';
 
-export { default as AppContainerStyled } from './AppContainerStyled/AppContainer.styled.js';
+export { default as AppContainerStyled } from './AppContainerStyled/AppContainer.styled';

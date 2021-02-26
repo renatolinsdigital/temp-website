@@ -8,6 +8,7 @@ import {
 
 
 type TextStyledProps = PaddingBoxStyledProps & {
+  isRemFontSized?: boolean;
   isInUpperCase?: boolean;
   lineHeight?: LineHeightsOptions;
   fontWeight?: FontWeightsOptions;

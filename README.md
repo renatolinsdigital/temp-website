@@ -33,11 +33,7 @@ declare module '*.js';
 declare module '*.scss';
 ```
 
-* Every Javascript(.js) imported must include __.js__ extension in file name, whether it contains just logic or is a styled component file. This will ensure we are using a Javascript module. Examples:
-
-```
-export { default as AppContainerStyled } from './AppContainerStyled/AppContainer.styled.js';
-```
+* Every Javascript(.js) imported must include __.js__ extension in file name, whether it contains just logic or is a styled component file. This will ensure we are using a Javascript module.
 
 * Every __index__ file should have the __.ts__ extension. This will help on module importation, and also on identificating the type of file
 

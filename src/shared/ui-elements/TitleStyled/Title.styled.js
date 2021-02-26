@@ -3,7 +3,7 @@ import { getColorByOption } from '../../helper-methods';
 
 const TitleStyled = styled.h1(({ theme, colorOption }) => {
 
-  const { isInDarkMode, colors, variantColors, fontFamilies, fontSizes } = theme;
+  const { isInDarkMode, colors, variantColors, fontFamilies, fontSizesPx } = theme;
 
   const selectedColor = isInDarkMode
     ? getColorByOption(theme, colorOption)
@@ -21,7 +21,7 @@ const TitleStyled = styled.h1(({ theme, colorOption }) => {
     margin: '15px 0 5px',
     padding: '4px 10px',
     fontFamily: fontFamilies.heading1,
-    fontSize: fontSizes.small,
+    fontSize: fontSizesPx.small,
     textTransform: 'uppercase',
     color: isInDarkMode ? darkModeColor : lightModeColor
   };

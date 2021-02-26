@@ -52,7 +52,7 @@ const defaultTheme: Theme = {
       'sans-serif'
     ]
   },
-  fontSizes: {
+  fontSizesPx: {
     smallest: 12,
     small: 14,
     default: 16,
@@ -61,6 +61,16 @@ const defaultTheme: Theme = {
     huge: 24,
     jumbo: 32,
     biggest: 40
+  },
+  fontSizesRem: {
+    smallest: .75,
+    small: .875,
+    default: 1,
+    large: 1.125,
+    extraLarge: 1.375,
+    huge: 1.5,
+    jumbo: 2,
+    biggest: 2.5
   },
   fontWeights: {
     regular: 400,

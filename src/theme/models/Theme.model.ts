@@ -13,7 +13,8 @@ interface Theme {
   isInDarkMode?: boolean;
   variantColors?: VariantColors;
   fontFamilies: FontFamilies;
-  fontSizes: FontSizes;
+  fontSizesPx: FontSizes;
+  fontSizesRem: FontSizes;
   fontWeights: FontWeights;
   lineHeights: LineHeights;
 }

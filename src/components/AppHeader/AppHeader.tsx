@@ -3,7 +3,7 @@ import { BoxStyled } from '../../shared/containers';
 import { TextStyled } from '../../shared/ui-elements';
 
 function AppHeader() {
-
+  return (
     <BoxStyled
       mainAxisAlignment="end"
       paddingTop={10}
@@ -14,7 +14,8 @@ function AppHeader() {
       <TextStyled
         isInUpperCase
         paddingRight={5}
-        fontSize="smallest">
+        fontSize="smallest"
+      >
         Status:
       </TextStyled>
       <TextStyled
