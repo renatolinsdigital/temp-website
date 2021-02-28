@@ -16,7 +16,13 @@ const TextStyled: TextStyledContainer = styled.span((
     paddingLeft = 0,
     paddingRight = 0
   }: StyledProps & TextStyledProps): CssInJs => {
-  const { variantColors, fontSizesRem, fontSizesPx, lineHeights, fontWeights } = theme;
+  const {
+    variantColors,
+    fontSizesRem,
+    fontSizesPx,
+    lineHeights,
+    fontWeights
+  } = theme;
 
   const fontSizeToBeApplied = fontSize
     &&

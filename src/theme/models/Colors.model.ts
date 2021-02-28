@@ -8,6 +8,7 @@ interface NeutralColors {
 
 interface VariantColors {
   text: string;
+  heading: string;
   textBold: string;
   appBackGround: string;
 }

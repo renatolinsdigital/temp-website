@@ -1,13 +1,23 @@
-import { Theme, VisualIdentityColorsOptions } from "../../theme/models";
+import {
+  Theme,
+  VisualIdentityColorsOptions
+} from "../../theme/models";
 
 const getColorByOption = (
   theme: Theme,
   colorOption: VisualIdentityColorsOptions
 ): string | null => {
 
-  if (!theme || !theme.colors || !colorOption) return null;
+  if (!theme || !theme.colors || !colorOption) {
+    return theme.colors.transparent;
+  }
 
-  const { primary, secondary, tertiary, quaternary } = theme.colors;
+  const {
+    primary,
+    secondary,
+    tertiary,
+    quaternary
+  } = theme.colors;
 
   const colorOptions = {
     'primary': primary,

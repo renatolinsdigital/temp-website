@@ -79,6 +79,7 @@ const defaultTheme: Theme = {
   lineHeights: {
     body: 1.5,
     heading: 2,
+    subHeading: 1.8,
     code: 1.6,
   },
 };

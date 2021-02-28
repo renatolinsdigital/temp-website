@@ -26,6 +26,7 @@ interface FontSizes {
 interface LineHeights {
   body: number;
   heading: number;
+  subHeading: number;
   code?: number;
 }
 
