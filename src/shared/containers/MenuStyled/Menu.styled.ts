@@ -4,21 +4,24 @@ import { CssInJs, StyledProps } from '../../models';
 import {
   MenuContainerStyled,
   ListStyledProps,
-  ItemStyledProps
+  ItemStyledProps,
+  NavStyledProps
 } from './Menu.styled.model';
 
-const MenuStyled: MenuContainerStyled = styled.nav(() => (
-  {
-    display: 'flex',
-    width: '100%'
-  }
-));
+const MenuStyled: MenuContainerStyled = styled.nav(
+  ({ hasNoMainAxisAlignment }: StyledProps & NavStyledProps): CssInJs => (
+    {
+      display: 'flex',
+      width: '100%',
+      justifyContent: hasNoMainAxisAlignment ? 'flex-start' : 'center'
+    }
+  ));
 
 MenuStyled.List = styled.ul(
   ({ isVertical }: StyledProps & ListStyledProps): CssInJs => (
     {
       display: 'flex',
-      width: '100%',
+
       justifyContent: 'center',
       flexDirection: isVertical ? 'column' : 'row',
       'li': {

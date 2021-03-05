@@ -24,7 +24,7 @@ function MainContent() {
           Latest Projects
         </TitleStyled>
 
-        <MenuStyled>
+        <MenuStyled hasNoMainAxisAlignment>
           <MenuStyled.List isVertical>
 
             <MenuStyled.Item hoverColor="primary">
