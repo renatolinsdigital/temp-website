@@ -1,6 +1,9 @@
 import { StyledComponent } from "styled-components";
-import { CssInJs } from "../../models";
-import { PaddingBoxStyledProps, MarginBoxStyledProps } from "../../models";
+import {
+  CssInJs,
+  PaddingBoxStyledProps,
+  MarginBoxStyledProps
+} from "../../models";
 
 interface FlexBoxStyledProps {
   isVertical?: boolean;
