@@ -3,7 +3,12 @@ import LogoStyled from './Logo.styled';
 
 function Logo() {
   return (
-    <LogoStyled width="271" height="391" viewBox="0 0 271 391" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <LogoStyled
+      width="271"
+      height="391"
+      viewBox="0 0 271 391"
+      fill="none"
+      xmlns="http://www.w3.org/2000/svg">
       <>
         <path id="border" d="M0.270996 0L0 390.102L270.689 390.223V0.0950012L0.270996 0ZM10.003 380.104L10.267 10.004L260.689 10.104V380.219L10.003 380.104Z" fill="#8D8D8D" />
         <path id="secondary" d="M30 30.406V100.932C55.598 105.637 75 128.049 75 155.008C75 181.967 55.599 204.379 30 209.084V279.609C94.359 274.513 145 220.675 145 155.008C144.999 89.339 94.359 35.501 30 30.406Z" fill="#0085CB" />

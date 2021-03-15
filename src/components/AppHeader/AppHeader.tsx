@@ -11,19 +11,21 @@ function AppHeader() {
       paddingLeft={15}
       paddingBottom={10}
     >
-      <TextStyled
-        isInUpperCase
-        paddingRight={5}
-        fontSize="smallest"
-      >
-        Status:
+      <>
+        <TextStyled
+          isInUpperCase
+          paddingRight={5}
+          fontSize="smallest"
+        >
+          Status:
       </TextStyled>
-      <TextStyled
-        isInUpperCase
-        isBold
-        fontSize="smallest">
-        coding
+        <TextStyled
+          isInUpperCase
+          isBold
+          fontSize="smallest">
+          coding
       </TextStyled>
+      </>
     </BoxStyled>
   );
 }

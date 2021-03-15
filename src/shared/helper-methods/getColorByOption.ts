@@ -1,11 +1,10 @@
-import {
-  Theme,
-  VisualIdentityColorsOptions
-} from "../../theme/models";
+
+import { DefaultTheme } from 'styled-components';
+import { VisualIdentityColorOptions } from '../models';
 
 const getColorByOption = (
-  theme: Theme,
-  colorOption: VisualIdentityColorsOptions
+  theme: DefaultTheme,
+  colorOption: VisualIdentityColorOptions
 ): string | null => {
 
   if (!theme || !theme.colors || !colorOption) {
