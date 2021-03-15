@@ -1,6 +1,5 @@
 import 'react';
 import 'styled-components';
-import { ChildrenElement } from './shared/models';
 
 interface VisualIdentityColors {
   primary: string;
@@ -67,11 +66,5 @@ declare module 'styled-components' {
     fontSizesRem: FontSizes;
     fontSizesPx: FontSizes;
     fontFamilies: FontFamilies;
-  }
-}
-
-declare module 'react' {
-  interface HTMLAttributes<T> extends AriaAttributes, DOMAttributes<T> {
-    [key: string]: string | number | boolean | ChildrenElement;
   }
 }

@@ -8,7 +8,7 @@ interface AnchorProps {
   location?: string;
   label?: string;
   isOpeningInNewTab?: boolean;
-  children: ChildrenElement;
+  children?: ChildrenElement;
 }
 
 export default AnchorProps;

@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { getColorByOption } from '../../helper-methods';
 import { AnchorProps, CssInJs } from '../../models';
 
 const AnchorStyled = styled.a((
@@ -11,7 +10,7 @@ const AnchorStyled = styled.a((
   const { variantColors } = theme;
 
   const selectedHoverColor = hoverColor
-    ? getColorByOption(theme, hoverColor)
+    ? theme.colors[hoverColor]
     : variantColors.textBold;
 
   return {

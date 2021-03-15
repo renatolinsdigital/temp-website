@@ -1,9 +1,8 @@
 import React from 'react';
 import { Logo } from '..';
-import { TitleStyled } from '../../shared/ui-elements';
+import { TitleStyled, MenuStyled } from '../../shared/ui-elements';
 import { Link } from '../../shared/utilities';
 import { BoxStyled } from '../../shared/containers';
-import { MenuStyled } from '../../shared/ui-elements';
 
 function MainContent() {
   return (
@@ -24,7 +23,7 @@ function MainContent() {
           </BoxStyled>
           <TitleStyled colorOption="primary">
             Latest Projects
-        </TitleStyled>
+          </TitleStyled>
 
           <MenuStyled hasNoMainAxisAlignment>
             <MenuStyled.List isVertical>
@@ -56,7 +55,7 @@ function MainContent() {
 
           <TitleStyled colorOption="secondary">
             Recent activity
-        </TitleStyled>
+          </TitleStyled>
 
           <MenuStyled>
             <MenuStyled.List isVertical>

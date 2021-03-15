@@ -1,6 +1,6 @@
-import styled from 'styled-components';
-import { getColorByOption } from '../../helper-methods';
+import styled, { StyledComponent } from 'styled-components';
 import { CssInJs, VisualIdentityColorOptions, WithTheme } from '../../models';
+import { DefaultTheme } from 'styled-components';
 
 type TitleStyledProps = WithTheme & {
   colorOption?: VisualIdentityColorOptions;
@@ -9,7 +9,7 @@ type TitleStyledProps = WithTheme & {
   isTextColorDark?: boolean;
 };
 
-const TitleStyled = styled.h1((
+const TitleStyled: StyledComponent<"h1", DefaultTheme, TitleStyledProps> = styled.h1((
   {
     theme,
     colorOption,
@@ -31,7 +31,7 @@ const TitleStyled = styled.h1((
     : variantColors.heading;
 
   const backgroundColor = isInDarkMode
-    ? getColorByOption(theme, colorOption)
+    ? colors[colorOption]
     : colors.neutralBlue;
 
   return {

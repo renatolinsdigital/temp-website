@@ -1,7 +1,35 @@
-import styled from 'styled-components';
-import { CssInJs } from '../../models';
+import styled, { StyledComponent } from 'styled-components';
+import { CssInJs, WithTheme } from '../../models';
+import { DefaultTheme } from 'styled-components';
 
-const TextStyled = styled.span((
+type TextProps = WithTheme & {
+  isInUpperCase?: boolean;
+  isBold?: boolean;
+  fontSize?:
+  'smallest'
+  | 'small'
+  | 'default'
+  | 'large'
+  | 'extraLarge'
+  | 'huge'
+  | 'jumbo'
+  | 'biggest',
+  lineHeight?:
+  'body'
+  | 'heading'
+  | 'subHeading'
+  | 'code';
+  fontWeight?:
+  'regular'
+  | 'bold';
+  isRemFontSized?: boolean;
+  paddingTop?: number;
+  paddingBottom?: number;
+  paddingLeft?: number;
+  paddingRight?: number;
+}
+
+const TextStyled: StyledComponent<"span", DefaultTheme, TextProps> = styled.span((
   {
     theme,
     isInUpperCase,
@@ -14,7 +42,7 @@ const TextStyled = styled.span((
     paddingBottom = 0,
     paddingLeft = 0,
     paddingRight = 0
-  }): CssInJs => {
+  }: TextProps): CssInJs => {
   const {
     variantColors,
     fontSizesRem,

@@ -1,19 +1,10 @@
 import styled from 'styled-components';
-import { getColorByOption } from '../../helper-methods';
 import { CssInJs, VisualIdentityColorOptions, WithTheme } from '../../models';
 import { StyledComponent } from 'styled-components';
 import { DefaultTheme } from 'styled-components';
 
-type MenuListStyled = StyledComponent<"ul", DefaultTheme>;
-type MenuItemStyled = StyledComponent<"li", DefaultTheme>;
-
-type MenuContainerStyled = StyledComponent<'nav', DefaultTheme> & {
-  List?: MenuListStyled;
-  Item?: MenuItemStyled;
-}
-
 interface MenuProps {
-  hasNoMainAxisAlignment: boolean;
+  hasNoMainAxisAlignment?: boolean;
 }
 
 type ListProps = WithTheme & {
@@ -21,11 +12,20 @@ type ListProps = WithTheme & {
 }
 
 type ItemProps = WithTheme & {
-  hoverColor: VisualIdentityColorOptions;
+  hoverColor?: VisualIdentityColorOptions;
   hasIcon?: boolean;
 }
 
-const MenuStyled: MenuContainerStyled = styled.nav(
+type MenuListContainer = StyledComponent<"ul", DefaultTheme, ListProps>;
+
+type MenuItemContainer = StyledComponent<"li", DefaultTheme, ItemProps>;
+
+type MenuStyledContainer = StyledComponent<"nav", DefaultTheme, MenuProps> & {
+  List?: MenuListContainer;
+  Item?: MenuItemContainer;
+}
+
+const MenuStyled: MenuStyledContainer = styled.nav(
   ({ hasNoMainAxisAlignment }: MenuProps): CssInJs => (
     {
       display: 'flex',
@@ -49,7 +49,9 @@ MenuStyled.List = styled.ul(
 
 MenuStyled.Item = styled.li(
   ({ hasIcon, hoverColor, theme }: ItemProps): CssInJs => {
-    const selectedHoverColor = getColorByOption(theme, hoverColor);
+    const selectedHoverColor = hoverColor
+      ? theme.colors[hoverColor]
+      : theme.colors.transparent;
 
     return {
       display: 'flex',

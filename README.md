@@ -2,25 +2,28 @@
 
 This is the temporary version of my Website. Below there are some project´s conventions:
 
+## Project Structure
+
+* All models should be in it´s own separate file, however, models for components created with Styled Components can be defined into the component itself
+
 ## File extensions
 
 * React components should always have __.tsx__ extension, as it represents Typescript with JSX. Other Typescript files, should be named with just __.ts__
-* Every interface should have the extension __.model.ts__
+* Every model/interface should have the extension __.model.ts__
 * Every styled component should include __styled__ on it´s name, and also have the __.ts__ extension
 * Every enum should have the extension __.enum.ts__
-* Every model applied to styled components only, shoud have the extension __.styled.model.ts__
 * In certain justified scenarios, styled components can have __.ts__ extension (without type check). For example, when starting a new styled component, we might not predict props at first. Anyways, a component is only considered ready when it is fully typed. It is considered important to have __type hints__ on editor, avoiding incorrect types or values
 
 ## Naming conventions
 
 * Every React component should be named in upper camel case, as well as the folder containing it. Ex: ```MyComponent -> MyComponent.ts```
-* Every Styled components component folder should be named in upper camel case, followed by the suffix __Styled__. The component itself, shoube be named in uppper camel case, having the extension mentioned above. Ex: ```MyComponentStyled -> MyComponent.styled.ts```
+* Every Styled components component folder should be named in upper camel case, followed by the suffix __Styled__. The component itself, should be named in upper camel case, having the extension mentioned above. Ex: ```MyComponentStyled -> MyComponent.styled.ts```
 * Every folder that does not hold a self-contained component (that can be exported/imported) should be named in slug case. Ex: ```pages```, ```models```, ```containers```, etc.
 * Every Model(Interfaces, enums, etc) should be named in upper camel case, having the extension mentioned above. Ex: ```MyComponent.model.ts```, ```MyValues.enum.ts```
   
 ## Imports/exports
 
-* Every group of resource (components, models, styles, etc) should have an entry point, an __index__ file re-exporting the entire gorup
+* Every group of resource (components, models, styles, etc) should have an entry point, an __index__ file re-exporting the entire group
 * Imports within the __shared__ folder should always be relative, as anything inside this fold has the potential to becoming a library in the future
 * Imports ocurring outside the __shared__ folder should be absolute, as it is better for readability and organization
 

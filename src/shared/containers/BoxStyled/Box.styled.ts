@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled, { DefaultTheme, StyledComponent } from "styled-components";
 import { CssInJs, FlexContainerProps, WithTheme } from "../../models";
 
 type BoxStyledProps =
@@ -17,7 +17,7 @@ type BoxStyledProps =
     maxWidth?: number;
   }
 
-const BoxStyled = styled.div((
+const BoxStyled: StyledComponent<"div", DefaultTheme, BoxStyledProps> = styled.div((
   {
     paddingTop = 0,
     paddingBottom = 0,
