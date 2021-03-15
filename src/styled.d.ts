@@ -1,7 +1,6 @@
 import 'react';
 import 'styled-components';
 import { ChildrenElement } from './shared/models';
-import { VariantColors } from './theme/models';
 
 interface VisualIdentityColors {
   primary: string;
