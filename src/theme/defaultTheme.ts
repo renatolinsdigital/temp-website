@@ -1,13 +1,11 @@
-import { VisualIdentityColors, NeutralColors, Theme } from './models';
-
-const visualIdentityColors: VisualIdentityColors = {
+const visualIdentityColors = {
   primary: '#ee2d30',
   secondary: '#0085cb',
   tertiary: '#f7ec29',
   quaternary: '#8d8d8d'
 };
 
-const neutralColors: NeutralColors = {
+const neutralColors = {
   transparent: 'transparent',
   white: '#FFFFFF',
   neutralBlue: '#eaf1f4',
@@ -15,14 +13,12 @@ const neutralColors: NeutralColors = {
   black: '#000000'
 };
 
-const defaultColors:
-  VisualIdentityColors
-  & NeutralColors = {
+const defaultColors = {
   ...visualIdentityColors,
   ...neutralColors
 };
 
-const defaultTheme: Theme = {
+const defaultTheme = {
   colors: {
     ...defaultColors
   },

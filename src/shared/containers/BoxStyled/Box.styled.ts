@@ -1,8 +1,23 @@
 import styled from "styled-components";
-import { CssInJs, StyledProps } from "../../models";
-import { BoxContainerStyled, BoxPropsStyled } from './Box.styled.model';
+import { CssInJs, FlexContainerProps, WithTheme } from "../../models";
 
-const BoxStyled: BoxContainerStyled = styled.div((
+type BoxStyledProps =
+  WithTheme
+  & FlexContainerProps
+  & {
+    paddingTop?: number;
+    paddingBottom?: number;
+    paddingLeft?: number;
+    paddingRight?: number;
+    marginTop?: number;
+    marginBottom?: number;
+    marginLeft?: number;
+    marginRight?: number;
+    isVertical?: boolean;
+    maxWidth?: number;
+  }
+
+const BoxStyled = styled.div((
   {
     paddingTop = 0,
     paddingBottom = 0,
@@ -16,7 +31,7 @@ const BoxStyled: BoxContainerStyled = styled.div((
     maxWidth,
     mainAxisAlignment,
     crossAxisAlignment,
-  }: StyledProps & BoxPropsStyled): CssInJs => {
+  }: BoxStyledProps): CssInJs => {
   const justifyContent
     = mainAxisAlignment === 'start'
       ? 'flex-start'

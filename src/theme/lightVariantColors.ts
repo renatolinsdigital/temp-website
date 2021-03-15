@@ -1,9 +1,8 @@
-import { VariantColors } from './models';
-
-const lightVariantColors: VariantColors = {
+const lightVariantColors = {
   text: '#1d1f21',
-  heading: '#070C0E',
   textBold: '#070C0E',
+  heading: '#070C0E',
+  containerBackground: '#c5c8c9',
   appBackGround: '#c5c8c9'
 };
 
