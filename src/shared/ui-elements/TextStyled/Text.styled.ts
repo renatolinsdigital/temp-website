@@ -1,8 +1,7 @@
 import styled from 'styled-components';
-import { CssInJs, StyledProps } from '../../models';
-import { TextStyledContainer, TextStyledProps } from './Text.styled.model';
+import { CssInJs } from '../../models';
 
-const TextStyled: TextStyledContainer = styled.span((
+const TextStyled = styled.span((
   {
     theme,
     isInUpperCase,
@@ -15,7 +14,7 @@ const TextStyled: TextStyledContainer = styled.span((
     paddingBottom = 0,
     paddingLeft = 0,
     paddingRight = 0
-  }: StyledProps & TextStyledProps): CssInJs => {
+  }): CssInJs => {
   const {
     variantColors,
     fontSizesRem,

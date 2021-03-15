@@ -1,6 +1,6 @@
 import React from 'react';
 import { AnchorStyled } from '../';
-import AnchorProps from '../AnchorStyled/Anchor.styled.model';
+import { AnchorProps } from '../../models';
 
 function Link(
   {
