@@ -1,12 +1,11 @@
 import styled from 'styled-components';
-import { AnchorProps, CssInJs } from '../../models';
+import { AnchorProps, CssInJs, WithTheme } from '../../models';
 
 const AnchorStyled = styled.a((
-  {
-    theme,
+  { theme,
     isActive,
     hoverColor
-  }: AnchorProps): CssInJs => {
+  }: WithTheme & AnchorProps): CssInJs => {
   const { variantColors } = theme;
 
   const selectedHoverColor = hoverColor

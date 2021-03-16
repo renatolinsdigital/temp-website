@@ -53,6 +53,10 @@ declare module '*.scss';
 * As long as this project uses a Javascript syntax on styled components, we can extend styles very easily, by simply creating a Javascript object to be merged within other styled components. 
 * If a set of props is known but not it´s values, we can create and extend a props interface joining it within our components with __&__. We can see this approach inside __TextStyled.styled.ts__ component, which makes use of a shared prop interface called ```PaddingBoxStyledProps```
 
+## Dealing with Typescript
+
+* Ignoring a Typescript rule(with __// @ts-ignore__) can ONLY be made for Styled components that are also a compound component. This is necessary because these types of components demands a mandatory property that is only assigned after the component´s definitions. 
+
 ## Theming
 
 * Every single component with text or colors is using theme properties. That being said, we wil diferentiate between theme default colors (colors) and colors that might vary within the theme (variantColors), for example, when using dark mode. Theme properties are already setup, typed and injected with this idea in mind.

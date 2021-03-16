@@ -1,11 +1,11 @@
 import styled, { StyledComponent } from 'styled-components';
-import { CssInJs, WithTheme } from '../models';
+import { CssInJs, WithTheme } from '../../models';
 import { DefaultTheme } from 'styled-components';
 
 type TextProps = WithTheme & {
   isInUpperCase?: boolean;
   isBold?: boolean;
-  fontSize:
+  fontSize?:
   'smallest'
   | 'small'
   | 'default'
@@ -14,12 +14,12 @@ type TextProps = WithTheme & {
   | 'huge'
   | 'jumbo'
   | 'biggest',
-  lineHeight:
+  lineHeight?:
   'body'
   | 'heading'
   | 'subHeading'
   | 'code';
-  fontWeight:
+  fontWeight?:
   'regular'
   | 'bold';
   isRemFontSized?: boolean;
@@ -52,8 +52,7 @@ const TextStyled: StyledComponent<"span", DefaultTheme, TextProps> = styled.span
   } = theme;
 
   const fontSizeToBeApplied = fontSize
-    &&
-    (
+    && (
       isRemFontSized
         ? `${fontSizesRem[fontSize]}rem`
         : `${fontSizesPx[fontSize]}px`

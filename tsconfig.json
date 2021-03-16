@@ -12,7 +12,7 @@
     "checkJs": false,
     "noEmit": true,
     "noImplicitAny": false,
-    "strict": false,
+    "strict": true,
     "allowSyntheticDefaultImports": true,
     "skipLibCheck": true,
     "noUnusedLocals": true,

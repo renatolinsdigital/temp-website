@@ -31,7 +31,7 @@ const TitleStyled: StyledComponent<"h1", DefaultTheme, TitleStyledProps> = style
     : variantColors.heading;
 
   const backgroundColor = isInDarkMode
-    ? colors[colorOption]
+    ? colors[colorOption || 'transparent']
     : colors.neutralBlue;
 
   return {
