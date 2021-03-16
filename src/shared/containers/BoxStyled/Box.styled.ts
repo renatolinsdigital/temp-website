@@ -15,14 +15,7 @@ type BoxStyledProps =
     marginRight?: number;
     isVertical?: boolean;
     maxWidth?: number;
-    bgVariantColor?:
-    'appBackground'
-    | 'containerBackground';
-    bgColor?:
-    'primary'
-    | 'secondary'
-    | 'tertiary'
-    bgColorForDarkMode?:
+    fixedBackgroundColor?:
     'primary'
     | 'secondary'
     | 'tertiary'
@@ -41,9 +34,7 @@ const BoxStyled: StyledComponent<"div", DefaultTheme, BoxStyledProps> = styled.d
     marginRight = 0,
     isVertical = false,
     maxWidth,
-    bgVariantColor = 'containerBackground',
-    bgColor,
-    bgColorForDarkMode,
+    fixedBackgroundColor,
     mainAxisAlignment,
     crossAxisAlignment,
   }: BoxStyledProps): CssInJs => {
@@ -63,12 +54,11 @@ const BoxStyled: StyledComponent<"div", DefaultTheme, BoxStyledProps> = styled.d
     display: 'flex',
     flexDirection: isVertical ? 'column' : 'row',
     width: '100%',
+    height: '100%',
     maxWidth: maxWidth ? `${maxWidth}px` : '100%',
-    backgroundColor: bgColor && !theme.isInDarkMode
-      ? theme.colors[bgColor]
-      : bgColorForDarkMode && theme.isInDarkMode
-        ? theme.colors[bgColorForDarkMode]
-        : theme.variantColors[bgVariantColor],
+    backgroundColor: fixedBackgroundColor
+      ? theme.colors[fixedBackgroundColor]
+      : theme.variantColors.containerBackground,
     justifyContent,
     alignItems,
     paddingTop,
