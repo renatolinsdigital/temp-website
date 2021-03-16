@@ -7,7 +7,6 @@ import { Link } from '../../shared/utilities';
 import { MenuStyled } from '../../shared/ui-elements';
 
 function AppFooter() {
-  console.log(MenuStyled);
   return (
     <BoxStyled
       paddingTop={30}
