@@ -1,4 +1,3 @@
-import 'react';
 import 'styled-components';
 
 interface VisualIdentityColors {
