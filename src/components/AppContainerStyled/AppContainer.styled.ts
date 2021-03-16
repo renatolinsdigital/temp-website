@@ -8,8 +8,6 @@ const AppContainerStyled = styled.div(({ theme }) => {
     minHeight: '100%',
     height: '100vh',
     width: '100%',
-    overflowY: 'auto',
-    overflowX: 'hidden',
     gridAutoRows: 'min-content 1fr min-content',
 
     fontFamily: fontFamilies.body.join(','),

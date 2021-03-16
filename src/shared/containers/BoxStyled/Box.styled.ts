@@ -1,10 +1,8 @@
 import styled, { DefaultTheme, StyledComponent } from "styled-components";
-import { CssInJs, FlexContainerProps, WithTheme } from "../../models";
+import { CssInJs, WithTheme } from "../../models";
 
 type BoxStyledProps =
-  WithTheme
-  & FlexContainerProps
-  & {
+  WithTheme & {
     paddingTop?: number;
     paddingBottom?: number;
     paddingLeft?: number;
@@ -15,6 +13,12 @@ type BoxStyledProps =
     marginRight?: number;
     isVertical?: boolean;
     maxWidth?: number;
+    mainAxisAlignment?:
+    | 'start'
+    | 'end';
+    crossAxisAlignment?:
+    | 'start'
+    | 'end'
     fixedBackgroundColor?:
     'primary'
     | 'secondary'
@@ -54,7 +58,6 @@ const BoxStyled: StyledComponent<"div", DefaultTheme, BoxStyledProps> = styled.d
     display: 'flex',
     flexDirection: isVertical ? 'column' : 'row',
     width: '100%',
-    height: '100%',
     maxWidth: maxWidth ? `${maxWidth}px` : '100%',
     backgroundColor: fixedBackgroundColor
       ? theme.colors[fixedBackgroundColor]

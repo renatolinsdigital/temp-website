@@ -17,7 +17,8 @@ function MainContent() {
       >
         <>
           <BoxStyled
-            paddingBottom={10}
+            crossAxisAlignment="start"
+            marginBottom={40}
           >
             <Logo />
           </BoxStyled>
