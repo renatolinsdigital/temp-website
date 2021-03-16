@@ -1,11 +1,11 @@
 import styled, { StyledComponent } from 'styled-components';
-import { CssInJs, WithTheme } from '../../models';
+import { CssInJs, WithTheme } from '../models';
 import { DefaultTheme } from 'styled-components';
 
 type TextProps = WithTheme & {
   isInUpperCase?: boolean;
   isBold?: boolean;
-  fontSize?:
+  fontSize:
   'smallest'
   | 'small'
   | 'default'
@@ -14,12 +14,12 @@ type TextProps = WithTheme & {
   | 'huge'
   | 'jumbo'
   | 'biggest',
-  lineHeight?:
+  lineHeight:
   'body'
   | 'heading'
   | 'subHeading'
   | 'code';
-  fontWeight?:
+  fontWeight:
   'regular'
   | 'bold';
   isRemFontSized?: boolean;
@@ -32,11 +32,11 @@ type TextProps = WithTheme & {
 const TextStyled: StyledComponent<"span", DefaultTheme, TextProps> = styled.span((
   {
     theme,
-    isInUpperCase,
-    fontSize,
-    isBold,
-    lineHeight,
-    fontWeight,
+    isInUpperCase = false,
+    fontSize = 'default',
+    isBold = false,
+    lineHeight = 'body',
+    fontWeight = 'regular',
     isRemFontSized = true,
     paddingTop = 0,
     paddingBottom = 0,
@@ -66,8 +66,8 @@ const TextStyled: StyledComponent<"span", DefaultTheme, TextProps> = styled.span
       : theme.fontFamilies.body.join(','),
     textTransform: isInUpperCase ? 'uppercase' : 'none',
     fontSize: fontSizeToBeApplied || `${fontSizesRem.default}rem`,
-    lineHeight: lineHeight ? lineHeights[lineHeight] : lineHeights.body,
-    fontWeight: fontWeight ? fontWeights[fontWeight] : fontWeights.regular,
+    lineHeight: Number(lineHeights[lineHeight]),
+    fontWeight: fontWeights[fontWeight],
     paddingTop,
     paddingBottom,
     paddingLeft,
