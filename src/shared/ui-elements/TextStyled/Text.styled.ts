@@ -5,6 +5,15 @@ import { DefaultTheme } from 'styled-components';
 type TextProps = WithTheme & {
   isInUpperCase?: boolean;
   isBold?: boolean;
+  fixedColor?:
+  | 'primary'
+  | 'secondary'
+  | 'tertiary'
+  | 'white'
+  | 'snow'
+  | 'black'
+  | 'dark'
+  | 'transparent',
   fontSize?:
   'smallest'
   | 'small'
@@ -32,6 +41,7 @@ type TextProps = WithTheme & {
 const TextStyled: StyledComponent<"span", DefaultTheme, TextProps> = styled.span((
   {
     theme,
+    fixedColor,
     isInUpperCase = false,
     fontSize = 'default',
     isBold = false,
@@ -52,14 +62,19 @@ const TextStyled: StyledComponent<"span", DefaultTheme, TextProps> = styled.span
   } = theme;
 
   const fontSizeToBeApplied = fontSize
-    && (
+    &&
+    (
       isRemFontSized
         ? `${fontSizesRem[fontSize]}rem`
         : `${fontSizesPx[fontSize]}px`
     );
 
+  const defaultColor = isBold ? variantColors.textBold : variantColors.text;
+
   return {
-    color: isBold ? variantColors.textBold : variantColors.text,
+    color: fixedColor
+      ? theme.colors[fixedColor]
+      : defaultColor,
     fontFamily: isBold
       ? theme.fontFamilies.bodyBold.join(',')
       : theme.fontFamilies.body.join(','),

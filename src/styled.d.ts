@@ -8,7 +8,8 @@ interface VisualIdentityColors {
 }
 
 type Colors = VisualIdentityColors & {
-  white: string
+  white: string;
+  snow: string;
   black: string;
   dark: string;
   transparent: string;

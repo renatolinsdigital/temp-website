@@ -6,11 +6,12 @@ const visualIdentityColors = {
 };
 
 const neutralColors = {
-  transparent: 'transparent',
   white: '#FFFFFF',
+  snow: '#f0f6f6',
   neutralBlue: '#eaf1f4',
   dark: '#1d1f21',
-  black: '#000000'
+  black: '#000000',
+  transparent: 'transparent'
 };
 
 const defaultColors = {
