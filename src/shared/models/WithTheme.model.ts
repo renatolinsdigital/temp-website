@@ -1,7 +1,7 @@
 import { DefaultTheme } from "styled-components";
 
 type WithTheme = {
-  theme?: DefaultTheme;
+  theme: DefaultTheme;
 }
 
 export default WithTheme;
