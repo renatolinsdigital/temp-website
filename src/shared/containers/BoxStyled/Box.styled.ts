@@ -3,6 +3,8 @@ import { CssInJs, WithTheme } from "../../models";
 
 type BoxStyledProps =
   WithTheme & {
+    flex?: number | string;
+    isStretched?: boolean;
     paddingTop?: number;
     paddingBottom?: number;
     paddingLeft?: number;
@@ -13,6 +15,7 @@ type BoxStyledProps =
     marginRight?: number;
     isVertical?: boolean;
     maxWidth?: number;
+    verticalBreakPoint?: number;
     mainAxisAlignment?:
     | 'start'
     | 'end';
@@ -28,6 +31,8 @@ type BoxStyledProps =
 const BoxStyled: StyledComponent<"div", DefaultTheme, BoxStyledProps> = styled.div((
   {
     theme,
+    flex = 1,
+    isStretched = true,
     paddingTop = 0,
     paddingBottom = 0,
     paddingLeft = 0,
@@ -39,9 +44,11 @@ const BoxStyled: StyledComponent<"div", DefaultTheme, BoxStyledProps> = styled.d
     isVertical = false,
     maxWidth,
     fixedBackgroundColor,
+    verticalBreakPoint,
     mainAxisAlignment,
     crossAxisAlignment,
   }: BoxStyledProps): CssInJs => {
+
   const justifyContent
     = mainAxisAlignment === 'start'
       ? 'flex-start'
@@ -56,8 +63,10 @@ const BoxStyled: StyledComponent<"div", DefaultTheme, BoxStyledProps> = styled.d
 
   return {
     display: 'flex',
+    flex: isStretched ? flex : 'none',
     flexDirection: isVertical ? 'column' : 'row',
-    width: '100%',
+    width: isStretched ? '100%' : 'auto',
+    height: isStretched ? '100%' : 'auto',
     maxWidth: maxWidth ? `${maxWidth}px` : '100%',
     backgroundColor: fixedBackgroundColor
       ? theme.colors[fixedBackgroundColor]
@@ -71,7 +80,11 @@ const BoxStyled: StyledComponent<"div", DefaultTheme, BoxStyledProps> = styled.d
     marginTop,
     marginBottom,
     marginLeft,
-    marginRight
+    marginRight,
+    [`@media(max-width: ${verticalBreakPoint}px)`]: {
+      flexDirection: 'column',
+
+    }
   };
 });
 

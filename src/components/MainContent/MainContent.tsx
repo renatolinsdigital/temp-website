@@ -7,7 +7,7 @@ import { BoxStyled } from '../../shared/containers';
 function MainContent() {
   return (
     <BoxStyled
-      paddingTop={30}
+      paddingTop={60}
       paddingBottom={30}
       isVertical
     >
@@ -18,6 +18,7 @@ function MainContent() {
         <>
           <BoxStyled
             crossAxisAlignment="start"
+            isStretched={false}
             marginBottom={40}
           >
             <Logo />
