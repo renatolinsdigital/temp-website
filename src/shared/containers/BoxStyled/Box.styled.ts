@@ -5,6 +5,7 @@ type BoxStyledProps =
   WithTheme & {
     flex?: number | string;
     isStretched?: boolean;
+    useDefaultVariantColor?: boolean;
     paddingTop?: number;
     paddingBottom?: number;
     paddingLeft?: number;
@@ -26,6 +27,7 @@ type BoxStyledProps =
     'primary'
     | 'secondary'
     | 'tertiary'
+    | 'transparent'
   }
 
 const BoxStyled: StyledComponent<"div", DefaultTheme, BoxStyledProps> = styled.div((
@@ -43,7 +45,8 @@ const BoxStyled: StyledComponent<"div", DefaultTheme, BoxStyledProps> = styled.d
     marginRight = 0,
     isVertical = false,
     maxWidth,
-    fixedBackgroundColor,
+    useDefaultVariantColor,
+    fixedBackgroundColor = 'transparent',
     verticalBreakPoint,
     mainAxisAlignment,
     crossAxisAlignment,
@@ -68,9 +71,9 @@ const BoxStyled: StyledComponent<"div", DefaultTheme, BoxStyledProps> = styled.d
     width: isStretched ? '100%' : 'auto',
     height: isStretched ? '100%' : 'auto',
     maxWidth: maxWidth ? `${maxWidth}px` : '100%',
-    backgroundColor: fixedBackgroundColor
-      ? theme.colors[fixedBackgroundColor]
-      : theme.variantColors.containerBackground,
+    backgroundColor: useDefaultVariantColor
+      ? theme.variantColors.containerBackground
+      : theme.colors[fixedBackgroundColor],
     justifyContent,
     alignItems,
     paddingTop,
@@ -83,7 +86,6 @@ const BoxStyled: StyledComponent<"div", DefaultTheme, BoxStyledProps> = styled.d
     marginRight,
     [`@media(max-width: ${verticalBreakPoint}px)`]: {
       flexDirection: 'column',
-
     }
   };
 });
