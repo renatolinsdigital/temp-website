@@ -1,8 +1,6 @@
-import { DefaultTheme } from 'styled-components';
 import { ChildrenElement, VisualIdentityColorOptions } from '.';
 
 interface AnchorProps {
-  theme?: DefaultTheme;
   isActive?: boolean;
   hoverColor?: VisualIdentityColorOptions;
   location?: string;

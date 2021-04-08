@@ -1,4 +1,3 @@
-import React from 'react';
 import { AnchorStyled } from '../';
 import { AnchorProps } from '../../models';
 

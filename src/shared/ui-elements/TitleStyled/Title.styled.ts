@@ -1,8 +1,8 @@
-import styled, { StyledComponent } from 'styled-components';
-import { CssInJs, VisualIdentityColorOptions, WithTheme } from '../../models';
-import { DefaultTheme } from 'styled-components';
+import styled, { StyledComponent, DefaultTheme } from 'styled-components';
+import { CssInJs, VisualIdentityColorOptions } from '../../models';
 
-type TitleStyledProps = WithTheme & {
+type TitleStyledProps = {
+  theme: DefaultTheme;
   colorOption?: VisualIdentityColorOptions;
   isSubHeading?: boolean;
   isInUpperCase?: boolean;

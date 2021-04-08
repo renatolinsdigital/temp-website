@@ -1,17 +1,18 @@
 /* eslint-disable @typescript-eslint/ban-ts-comment */
-import styled from 'styled-components';
-import { CssInJs, VisualIdentityColorOptions, WithTheme } from '../../models';
-import { StyledComponent, DefaultTheme } from 'styled-components';
+import styled, { StyledComponent, DefaultTheme } from 'styled-components';
+import { CssInJs, VisualIdentityColorOptions } from '../../models';
 
 interface MenuProps {
   hasNoMainAxisAlignment?: boolean;
 }
 
-type ListProps = WithTheme & {
+type ListProps = {
+  theme: DefaultTheme;
   isVertical?: boolean;
 }
 
-type ItemProps = WithTheme & {
+type ItemProps = {
+  theme: DefaultTheme;
   hoverColor?: VisualIdentityColorOptions;
   hasIcon?: boolean;
 }
@@ -24,6 +25,7 @@ type MenuStyledContainer = StyledComponent<"nav", DefaultTheme, MenuProps> & {
   List: MenuListContainer;
   Item: MenuItemContainer;
 }
+
 // @ts-ignore
 const MenuStyled: MenuStyledContainer = styled.nav(
   ({ hasNoMainAxisAlignment }: MenuProps): CssInJs => (

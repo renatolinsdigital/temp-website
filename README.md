@@ -25,7 +25,7 @@ This is the temporary version of my Website. Below there are some project´s con
 
 * Every group of resource (components, models, styles, etc) should have an entry point, an __index__ file re-exporting the entire group
 * Imports within the __shared__ folder should always be relative, as anything inside this fold has the potential to becoming a library in the future
-* Imports ocurring outside the __shared__ folder should be absolute, as it is better for readability and organization
+* Imports occurring outside the __shared__ folder should be absolute, as it is better for readability and organization
 
 ## Module resolution
 
@@ -38,7 +38,7 @@ declare module '*.scss';
 
 * Every Javascript(.js) imported must include __.js__ extension in file name, whether it contains just logic or is a styled component file. This will ensure we are using a Javascript module.
 
-* Every __index__ file should have the __.ts__ extension. This will help on module importation, and also on identificating the type of file
+* Every __index__ file should have the __.ts__ extension. This will help on module importation, and also on identifying the type of file
 
 ## Importing React
 
@@ -48,16 +48,24 @@ declare module '*.scss';
 
 * __Everything we see in screen must be a component, either from React or from Styled Components__. This will ensure a lot of benefits like theme or design systems adherence, testability, maintainability, shareability, composition over inheritance, clean coding, etc. No loose elements with a ```className``` should be placed in this project
 * Components based on Styled components should use Javascript syntax over Sass syntax. This brings a cleaner syntax for components using ```props``` + conditional styling, will allow more patterns and notations, as well as making styling similar to platforms outside the Browser (ex. React Native)
-* Desconstruct props in arguments. Ex: ```MyComponent({prop1, prop2}: MyProps){}```
-* Avoid business logic directly inside components(including domain specific components) as dummy components are way easier to test. Instead, try and move business logic to a custom hook
-* As long as this project uses a Javascript syntax on styled components, we can extend styles very easily, by simply creating a Javascript object to be merged within other styled components. 
-* If a set of props is known but not it´s values, we can create and extend a props interface joining it within our components with __&__. We can see this approach inside __TextStyled.styled.ts__ component, which makes use of a shared prop interface called ```PaddingBoxStyledProps```
+* Deconstruct props in arguments. Ex: ```MyComponent({prop1, prop2}: MyProps){}```
+* Avoid business logic directly inside components(including domain specific components) as dummy components are way easier to test. Instead, try and move business logic to a custom React Hook
+* As long as this project uses a Javascript syntax on styled components, we can extend styles very easily, by simply creating an object to be merged within other styled components. 
+* It will be considered a best practice to extend interfaces with __&__, and models can also be part of the __shared__ folder. We can see this approach inside __TextStyled.styled.ts__ for example, which makes use of a shared prop interface called ```PaddingBoxStyledProps```
+
+## General React´s best practices
+
+* As per new JSX Transform(React 17+), it is not necessary anymore to import React while using JSX
 
 ## Dealing with Typescript
 
-* Ignoring a Typescript rule(with __// @ts-ignore__) can ONLY be made for Styled components that are also a compound component. This is necessary because these types of components demands a mandatory property that is only assigned after the component´s definitions. 
+* Ignoring a Typescript rule(with __// @ts-ignore__) can __ONLY__ be made for Styled components that are also a compound component. This is necessary because these types of components demands a mandatory property that is only assigned after component´s definitions. 
 
 ## Theming
 
-* Every single component with text or colors is using theme properties. That being said, we wil diferentiate between theme default colors (colors) and colors that might vary within the theme (variantColors), for example, when using dark mode. Theme properties are already setup, typed and injected with this idea in mind.
+* Every single component with text or colors is using theme properties. That being said, we will differentiate between theme default colors (colors) and colors that might vary within the theme (variantColors), for example, when using dark mode. Theme properties are already setup, typed and injected with this idea in mind.
+
+## Linting
+
+This project is configured with ESLint in __.eslintrc.json__ file. AirBnB styled guide for Typescript is also applied as a plugin. Be sure to also have ESLint plugin installed on your code editor.
 

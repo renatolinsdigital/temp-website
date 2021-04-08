@@ -1,10 +1,9 @@
-import React from 'react';
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import AndroidIcon from '@material-ui/icons/Android';
-import { BoxStyled } from '../../shared/containers';
-import { Link } from '../../shared/utilities';
-import { MenuStyled } from '../../shared/ui-elements';
+import { BoxStyled } from 'shared/containers';
+import { Link } from 'shared/utilities';
+import { MenuStyled } from 'shared/ui-elements';
 
 function AppFooter() {
   return (
@@ -16,7 +15,8 @@ function AppFooter() {
         <MenuStyled.List>
           <>
             <MenuStyled.Item hasIcon>
-              <Link hoverColor="primary"
+              <Link
+                hoverColor="primary"
                 location="https://github.com/renatolinsdigital"
                 isOpeningInNewTab
               >
@@ -25,7 +25,8 @@ function AppFooter() {
             </MenuStyled.Item >
 
             <MenuStyled.Item hasIcon>
-              <Link hoverColor="secondary"
+              <Link
+                hoverColor="secondary"
                 location="https://www.linkedin.com/in/renatolinsdigital"
                 isOpeningInNewTab
               >
@@ -34,7 +35,8 @@ function AppFooter() {
             </MenuStyled.Item >
 
             <MenuStyled.Item hasIcon>
-              <Link hoverColor="tertiary"
+              <Link
+                hoverColor="tertiary"
                 location="."
               >
                 <AndroidIcon />

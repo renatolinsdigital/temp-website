@@ -1,6 +1,5 @@
-import React from 'react';
-import { BoxStyled } from '../../shared/containers';
-import { TextStyled } from '../../shared/ui-elements';
+import { BoxStyled } from 'shared/containers';
+import { TextStyled } from 'shared/ui-elements';
 
 function AppHeader() {
   return (

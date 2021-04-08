@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { CssInJs } from '../../shared/models';
+import { CssInJs } from 'shared/models';
 
 const LogoStyled = styled.svg(({ theme }): CssInJs => {
   const {

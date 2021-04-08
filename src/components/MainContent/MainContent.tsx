@@ -1,8 +1,7 @@
-import React from 'react';
-import { Logo } from '..';
-import { TitleStyled, MenuStyled } from '../../shared/ui-elements';
-import { Link } from '../../shared/utilities';
-import { BoxStyled } from '../../shared/containers';
+import { Logo } from 'components';
+import { TitleStyled, MenuStyled } from 'shared/ui-elements';
+import { Link } from 'shared/utilities';
+import { BoxStyled } from 'shared/containers';
 
 function MainContent() {
   return (

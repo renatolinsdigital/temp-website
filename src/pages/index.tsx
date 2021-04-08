@@ -1,5 +1,3 @@
-import React from 'react';
-
 import {
   AppContainerStyled,
   AppHeader, MainContent, AppFooter

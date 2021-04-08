@@ -1,5 +1,4 @@
 
-import React from 'react';
 import { AppProps } from 'next/app';
 import { ThemeProvider, createGlobalStyle, DefaultTheme } from 'styled-components';
 import { defaultTheme, lightVariantColors, darkVariantColors } from '../theme';

@@ -1,34 +1,34 @@
 import styled, { DefaultTheme, StyledComponent } from "styled-components";
-import { CssInJs, WithTheme } from "../../models";
+import { CssInJs } from "../../models";
 
-type BoxStyledProps =
-  WithTheme & {
-    flex?: number | string;
-    isStretched?: boolean;
-    useDefaultVariantColor?: boolean;
-    paddingTop?: number;
-    paddingBottom?: number;
-    paddingLeft?: number;
-    paddingRight?: number;
-    marginTop?: number;
-    marginBottom?: number;
-    marginLeft?: number;
-    marginRight?: number;
-    isVertical?: boolean;
-    maxWidth?: number;
-    verticalBreakPoint?: number;
-    mainAxisAlignment?:
-    | 'start'
-    | 'end';
-    crossAxisAlignment?:
-    | 'start'
-    | 'end'
-    fixedBackgroundColor?:
-    'primary'
-    | 'secondary'
-    | 'tertiary'
-    | 'transparent'
-  }
+type BoxStyledProps = {
+  theme: DefaultTheme;
+  flex?: number | string;
+  isStretched?: boolean;
+  useDefaultVariantColor?: boolean;
+  paddingTop?: number;
+  paddingBottom?: number;
+  paddingLeft?: number;
+  paddingRight?: number;
+  marginTop?: number;
+  marginBottom?: number;
+  marginLeft?: number;
+  marginRight?: number;
+  isVertical?: boolean;
+  maxWidth?: number;
+  verticalBreakPoint?: number;
+  mainAxisAlignment?:
+  | 'start'
+  | 'end';
+  crossAxisAlignment?:
+  | 'start'
+  | 'end'
+  fixedBackgroundColor?:
+  'primary'
+  | 'secondary'
+  | 'tertiary'
+  | 'transparent'
+}
 
 const BoxStyled: StyledComponent<"div", DefaultTheme, BoxStyledProps> = styled.div((
   {

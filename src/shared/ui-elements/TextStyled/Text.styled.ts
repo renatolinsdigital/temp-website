@@ -1,8 +1,8 @@
-import styled, { StyledComponent } from 'styled-components';
-import { CssInJs, WithTheme } from '../../models';
-import { DefaultTheme } from 'styled-components';
+import styled, { StyledComponent, DefaultTheme } from 'styled-components';
+import { CssInJs } from '../../models';
 
-type TextProps = WithTheme & {
+type TextProps = {
+  theme: DefaultTheme;
   isInUpperCase?: boolean;
   isBold?: boolean;
   fixedColor?:
