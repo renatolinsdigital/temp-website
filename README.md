@@ -65,7 +65,7 @@ declare module '*.scss';
 
 * Every single component with text or colors is using theme properties. That being said, we will differentiate between theme default colors (colors) and colors that might vary within the theme (variantColors), for example, when using dark mode. Theme properties are already setup, typed and injected with this idea in mind.
 
-## Linting
+## Linting [TBD - Not fully configured yet]
 
-This project is configured with ESLint in __.eslintrc.json__ file. AirBnB styled guide for Typescript is also applied as a plugin. Be sure to also have ESLint plugin installed on your code editor.
+This project is configured with ESLint in __.eslintrc.json__ file. AirBnB style guides for Typescript(__eslint-config-airbnb-typescript__) is applied as a plugin. Be sure to also have ESLint plugin installed on your code editor. To run linter and have output results, use this command: __npx eslint . --ext .js,.jsx,.ts,.tsx__
 
