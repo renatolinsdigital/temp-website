@@ -4,7 +4,7 @@ import { TextStyled } from 'shared/ui-elements';
 function AppHeader() {
   return (
     <BoxStyled
-      mainAxisAlignment="end"
+      justifyContent="flex-end"
       paddingTop={10}
       paddingRight={15}
       paddingLeft={15}

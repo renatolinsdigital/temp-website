@@ -17,7 +17,7 @@ function MainContent() {
       >
         <>
           <BoxStyled
-            crossAxisAlignment="start"
+            id="logo-container"
             isStretched={false}
             marginBottom={40}
           >

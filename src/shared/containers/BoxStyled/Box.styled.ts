@@ -1,36 +1,24 @@
-import styled, { DefaultTheme, StyledComponent } from 'styled-components';
-import { CssInJs } from 'shared/models';
+import styled, { DefaultTheme, StyledComponent } from "styled-components";
+import { CssInJs, JustifyContent, AlignItems, BoxProps } from "shared/models";
 
-type BoxStyledProps = {
+type BoxStyledProps = BoxProps & {
   theme: DefaultTheme;
   flex?: number | string;
   isStretched?: boolean;
-  useDefaultVariantColor?: boolean;
-  paddingTop?: number;
-  paddingBottom?: number;
-  paddingLeft?: number;
-  paddingRight?: number;
-  marginTop?: number;
-  marginBottom?: number;
-  marginLeft?: number;
-  marginRight?: number;
+  hasVariantBackgroundColor?: boolean;
   isVertical?: boolean;
   maxWidth?: number;
   verticalBreakPoint?: number;
-  mainAxisAlignment?:
-  | 'start'
-  | 'end';
-  crossAxisAlignment?:
-  | 'start'
-  | 'end'
+  justifyContent?: JustifyContent;
+  alignItems?: AlignItems;
   fixedBackgroundColor?:
   'primary'
   | 'secondary'
   | 'tertiary'
-  | 'transparent'
-};
+  | 'transparent';
+}
 
-const BoxStyled: StyledComponent<'div', DefaultTheme, BoxStyledProps> = styled.div((
+const BoxStyled: StyledComponent<"div", DefaultTheme, BoxStyledProps> = styled.div((
   {
     theme,
     flex = 1,
@@ -45,22 +33,12 @@ const BoxStyled: StyledComponent<'div', DefaultTheme, BoxStyledProps> = styled.d
     marginRight = 0,
     isVertical = false,
     maxWidth,
-    useDefaultVariantColor,
+    hasVariantBackgroundColor = false,
     fixedBackgroundColor = 'transparent',
     verticalBreakPoint,
-    mainAxisAlignment,
-    crossAxisAlignment,
-  }: BoxStyledProps,
-): CssInJs => {
-  const justifyContent = mainAxisAlignment === 'start'
-    ? 'flex-start'
-    : mainAxisAlignment === 'end'
-      ? 'flex-end' : 'center';
-
-  const alignItems = crossAxisAlignment === 'start'
-    ? 'flex-start'
-    : crossAxisAlignment === 'end'
-      ? 'flex-end' : 'center';
+    justifyContent = 'center',
+    alignItems = 'center'
+  }: BoxStyledProps): CssInJs => {
 
   return {
     display: 'flex',
@@ -69,7 +47,7 @@ const BoxStyled: StyledComponent<'div', DefaultTheme, BoxStyledProps> = styled.d
     width: isStretched ? '100%' : 'auto',
     height: isStretched ? '100%' : 'auto',
     maxWidth: maxWidth ? `${maxWidth}px` : '100%',
-    backgroundColor: useDefaultVariantColor
+    backgroundColor: hasVariantBackgroundColor
       ? theme.variantColors.containerBackground
       : theme.colors[fixedBackgroundColor],
     justifyContent,
@@ -84,7 +62,7 @@ const BoxStyled: StyledComponent<'div', DefaultTheme, BoxStyledProps> = styled.d
     marginRight,
     [`@media(max-width: ${verticalBreakPoint}px)`]: {
       flexDirection: 'column',
-    },
+    }
   };
 });
 

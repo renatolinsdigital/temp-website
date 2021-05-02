@@ -1,7 +1,7 @@
 import styled, { StyledComponent, DefaultTheme } from 'styled-components';
-import { CssInJs } from 'shared/models';
+import { CssInJs, BoxProps } from 'shared/models';
 
-type TextProps = {
+type TextProps = BoxProps & {
   theme: DefaultTheme;
   isInUpperCase?: boolean;
   isBold?: boolean;
@@ -32,10 +32,6 @@ type TextProps = {
   'regular'
   | 'bold';
   isRemFontSized?: boolean;
-  paddingTop?: number;
-  paddingBottom?: number;
-  paddingLeft?: number;
-  paddingRight?: number;
 };
 
 const TextStyled: StyledComponent<'span', DefaultTheme, TextProps> = styled.span((
