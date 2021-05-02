@@ -5,8 +5,8 @@ const AppContainerStyled = styled.div(({ theme }) => {
 
   return {
     display: 'grid',
-    minHeight: '100%',
-    height: '100vh',
+    minHeight: '100vh',
+    height: '100%',
     width: '100%',
     gridAutoRows: 'min-content 1fr min-content',
 

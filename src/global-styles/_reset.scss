@@ -1,9 +1,10 @@
 /*Next App reset */
 #__next {
-  height: 100vh;
   display: flex;
   flex-direction: column;
   flex: 1;
+  height: 100%;
+  width: 100%;
 }
 
 /*Html elements reset*/
@@ -35,6 +36,8 @@ section:after {
 html,
 body {
   -webkit-font-smoothing: antialiased;
+  display: flex;
+  flex: 1;
 }
 
 main {
