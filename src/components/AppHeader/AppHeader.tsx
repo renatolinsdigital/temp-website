@@ -17,13 +17,14 @@ function AppHeader() {
           fontSize="smallest"
         >
           Status:
-      </TextStyled>
+        </TextStyled>
         <TextStyled
           isInUpperCase
           isBold
-          fontSize="smallest">
+          fontSize="smallest"
+        >
           coding
-      </TextStyled>
+        </TextStyled>
       </>
     </BoxStyled>
   );

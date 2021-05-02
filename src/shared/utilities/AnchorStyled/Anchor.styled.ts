@@ -1,12 +1,13 @@
 import styled, { DefaultTheme } from 'styled-components';
-import { AnchorProps, CssInJs } from '../../models';
+import { AnchorProps, CssInJs } from 'shared/models';
 
 const AnchorStyled = styled.a((
   {
     theme,
     isActive,
-    hoverColor
-  }: { theme: DefaultTheme } & AnchorProps): CssInJs => {
+    hoverColor,
+  }: { theme: DefaultTheme } & AnchorProps,
+): CssInJs => {
   const { variantColors } = theme;
 
   const selectedHoverColor = hoverColor
@@ -25,8 +26,8 @@ const AnchorStyled = styled.a((
       ? variantColors.textBold
       : variantColors.text,
     ':hover': {
-      color: selectedHoverColor
-    }
+      color: selectedHoverColor,
+    },
   };
 });
 

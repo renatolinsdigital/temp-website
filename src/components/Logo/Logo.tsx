@@ -1,7 +1,6 @@
 import LogoStyled from './Logo.styled';
 
 function Logo() {
-
   const primary = 'M93.86 30.018C94.855 30.604 95.841 31.202 96.821 \
   31.811C96.828 31.815 96.835 31.819 96.842 31.824C97.821 32.433 98.792 \
   33.053 99.755 33.685C99.762 33.689 99.768 33.694 99.775 33.698C100.74 \
@@ -60,7 +59,8 @@ function Logo() {
       height="391"
       viewBox="0 0 271 391"
       fill="none"
-      xmlns="http://www.w3.org/2000/svg">
+      xmlns="http://www.w3.org/2000/svg"
+    >
       <>
         <title>Renato Lins´ Logo</title>
         <path id="primary" d={primary} />

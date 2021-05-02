@@ -1,5 +1,5 @@
 import styled, { StyledComponent, DefaultTheme } from 'styled-components';
-import { CssInJs, VisualIdentityColorOptions } from '../../models';
+import { CssInJs, VisualIdentityColorOptions } from 'shared/models';
 
 type TitleStyledProps = {
   theme: DefaultTheme;
@@ -9,21 +9,21 @@ type TitleStyledProps = {
   isTextColorDark?: boolean;
 };
 
-const TitleStyled: StyledComponent<"h1", DefaultTheme, TitleStyledProps> = styled.h1((
+const TitleStyled: StyledComponent<'h1', DefaultTheme, TitleStyledProps> = styled.h1((
   {
     theme,
     colorOption,
     isSubHeading,
-    isInUpperCase = true
-  }: TitleStyledProps): CssInJs => {
-
+    isInUpperCase = true,
+  }: TitleStyledProps,
+): CssInJs => {
   const {
     isInDarkMode,
     variantColors,
     fontFamilies,
     fontSizesRem,
     lineHeights,
-    colors
+    colors,
   } = theme;
 
   const color = isInDarkMode && colorOption === 'tertiary'
@@ -54,7 +54,7 @@ const TitleStyled: StyledComponent<"h1", DefaultTheme, TitleStyledProps> = style
 
     lineHeight: isSubHeading
       ? lineHeights.subHeading
-      : lineHeights.heading
+      : lineHeights.heading,
   };
 });
 

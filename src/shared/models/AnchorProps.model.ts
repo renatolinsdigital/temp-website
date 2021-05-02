@@ -1,4 +1,5 @@
-import { ChildrenElement, VisualIdentityColorOptions } from '.';
+import ChildrenElement from './ChildrenElement.model';
+import VisualIdentityColorOptions from './VisualIdentityColorOptions.model';
 
 interface AnchorProps {
   isActive?: boolean;

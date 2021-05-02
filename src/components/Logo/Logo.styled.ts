@@ -6,30 +6,30 @@ const LogoStyled = styled.svg(({ theme }): CssInJs => {
     primary,
     secondary,
     tertiary,
-    quaternary
+    quaternary,
   } = theme.colors;
 
   if (theme.isInDarkMode) {
     return {
       '#primary': {
-        fill: primary
+        fill: primary,
       },
       '#secondary': {
-        fill: secondary
+        fill: secondary,
       },
       '#tertiary': {
-        fill: tertiary
+        fill: tertiary,
       },
       '#border': {
-        fill: quaternary
-      }
+        fill: quaternary,
+      },
     };
   }
 
   return {
-    'path': {
-      fill: theme.colors.dark
-    }
+    path: {
+      fill: theme.colors.dark,
+    },
   };
 });
 

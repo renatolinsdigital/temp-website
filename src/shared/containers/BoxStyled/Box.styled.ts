@@ -1,5 +1,5 @@
-import styled, { DefaultTheme, StyledComponent } from "styled-components";
-import { CssInJs } from "../../models";
+import styled, { DefaultTheme, StyledComponent } from 'styled-components';
+import { CssInJs } from 'shared/models';
 
 type BoxStyledProps = {
   theme: DefaultTheme;
@@ -28,9 +28,9 @@ type BoxStyledProps = {
   | 'secondary'
   | 'tertiary'
   | 'transparent'
-}
+};
 
-const BoxStyled: StyledComponent<"div", DefaultTheme, BoxStyledProps> = styled.div((
+const BoxStyled: StyledComponent<'div', DefaultTheme, BoxStyledProps> = styled.div((
   {
     theme,
     flex = 1,
@@ -50,19 +50,17 @@ const BoxStyled: StyledComponent<"div", DefaultTheme, BoxStyledProps> = styled.d
     verticalBreakPoint,
     mainAxisAlignment,
     crossAxisAlignment,
-  }: BoxStyledProps): CssInJs => {
+  }: BoxStyledProps,
+): CssInJs => {
+  const justifyContent = mainAxisAlignment === 'start'
+    ? 'flex-start'
+    : mainAxisAlignment === 'end'
+      ? 'flex-end' : 'center';
 
-  const justifyContent
-    = mainAxisAlignment === 'start'
-      ? 'flex-start'
-      : mainAxisAlignment === 'end'
-        ? 'flex-end' : 'center';
-
-  const alignItems
-    = crossAxisAlignment === 'start'
-      ? 'flex-start'
-      : crossAxisAlignment === 'end'
-        ? 'flex-end' : 'center';
+  const alignItems = crossAxisAlignment === 'start'
+    ? 'flex-start'
+    : crossAxisAlignment === 'end'
+      ? 'flex-end' : 'center';
 
   return {
     display: 'flex',
@@ -86,7 +84,7 @@ const BoxStyled: StyledComponent<"div", DefaultTheme, BoxStyledProps> = styled.d
     marginRight,
     [`@media(max-width: ${verticalBreakPoint}px)`]: {
       flexDirection: 'column',
-    }
+    },
   };
 });
 

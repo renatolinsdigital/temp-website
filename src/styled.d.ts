@@ -14,7 +14,7 @@ type Colors = VisualIdentityColors & {
   dark: string;
   transparent: string;
   neutralBlue: string;
-}
+};
 
 interface VariantColors {
   text: string;

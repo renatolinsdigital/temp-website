@@ -1,6 +1,5 @@
-/* eslint-disable @typescript-eslint/ban-ts-comment */
 import styled, { StyledComponent, DefaultTheme } from 'styled-components';
-import { CssInJs, VisualIdentityColorOptions } from '../../models';
+import { CssInJs, VisualIdentityColorOptions } from 'shared/models';
 
 interface MenuProps {
   hasNoMainAxisAlignment?: boolean;
@@ -9,22 +8,22 @@ interface MenuProps {
 type ListProps = {
   theme: DefaultTheme;
   isVertical?: boolean;
-}
+};
 
 type ItemProps = {
   theme: DefaultTheme;
   hoverColor?: VisualIdentityColorOptions;
   hasIcon?: boolean;
-}
+};
 
-type MenuListContainer = StyledComponent<"ul", DefaultTheme, ListProps>;
+type MenuListContainer = StyledComponent<'ul', DefaultTheme, ListProps>;
 
-type MenuItemContainer = StyledComponent<"li", DefaultTheme, ItemProps>;
+type MenuItemContainer = StyledComponent<'li', DefaultTheme, ItemProps>;
 
-type MenuStyledContainer = StyledComponent<"nav", DefaultTheme, MenuProps> & {
+type MenuStyledContainer = StyledComponent<'nav', DefaultTheme, MenuProps> & {
   List: MenuListContainer;
   Item: MenuItemContainer;
-}
+};
 
 // @ts-ignore
 const MenuStyled: MenuStyledContainer = styled.nav(
@@ -32,9 +31,10 @@ const MenuStyled: MenuStyledContainer = styled.nav(
     {
       display: 'flex',
       width: '100%',
-      justifyContent: hasNoMainAxisAlignment ? 'flex-start' : 'center'
+      justifyContent: hasNoMainAxisAlignment ? 'flex-start' : 'center',
     }
-  ));
+  ),
+);
 
 MenuStyled.List = styled.ul(
   ({ isVertical }: ListProps): CssInJs => (
@@ -42,11 +42,12 @@ MenuStyled.List = styled.ul(
       display: 'flex',
       justifyContent: 'center',
       flexDirection: isVertical ? 'column' : 'row',
-      'li': {
-        margin: isVertical ? '8px 0' : '0 20px'
-      }
+      li: {
+        margin: isVertical ? '8px 0' : '0 20px',
+      },
     }
-  ));
+  ),
+);
 
 MenuStyled.Item = styled.li(
   ({ hasIcon, hoverColor, theme }: ItemProps): CssInJs => {
@@ -61,9 +62,10 @@ MenuStyled.Item = styled.li(
       borderLeft: !hasIcon ? `5px solid ${theme.colors.transparent}` : 0,
       transition: 'all .2s ease',
       ':hover': {
-        borderLeftColor: selectedHoverColor
-      }
+        borderLeftColor: selectedHoverColor,
+      },
     };
-  });
+  },
+);
 
 export default MenuStyled;

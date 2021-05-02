@@ -1,7 +1,9 @@
 import {
-  AppContainerStyled,
-  AppHeader, MainContent, AppFooter
-} from '../components';
+  AppFooter,
+  AppHeader,
+  MainContent,
+  AppContainerStyled
+} from 'components';
 
 function Home() {
   return (

@@ -2,7 +2,7 @@ const visualIdentityColors = {
   primary: '#ee2d30',
   secondary: '#0085cb',
   tertiary: '#f7ec29',
-  quaternary: '#8d8d8d'
+  quaternary: '#8d8d8d',
 };
 
 const neutralColors = {
@@ -11,43 +11,43 @@ const neutralColors = {
   neutralBlue: '#eaf1f4',
   dark: '#1d1f21',
   black: '#000000',
-  transparent: 'transparent'
+  transparent: 'transparent',
 };
 
 const defaultColors = {
   ...visualIdentityColors,
-  ...neutralColors
+  ...neutralColors,
 };
 
 const defaultTheme = {
   colors: {
-    ...defaultColors
+    ...defaultColors,
   },
   fontFamilies: {
     body: [
       '"TitilliumWeb Regular"',
-      'sans-serif'
+      'sans-serif',
     ],
     bodyBold: [
       '"TitilliumWeb SemiBold"',
-      'sans-serif'
+      'sans-serif',
     ],
     heading1: [
       '"TitilliumWeb Bold"',
-      'sans-serif'
+      'sans-serif',
     ],
     heading2: [
       '"TitilliumWeb SemiBold"',
-      'sans-serif'
+      'sans-serif',
     ],
     link: [
       '"TitilliumWeb SemiBold"',
-      'sans-serif'
+      'sans-serif',
     ],
     uiElements: [
       '"TitilliumWeb SemiBold"',
-      'sans-serif'
-    ]
+      'sans-serif',
+    ],
   },
   fontSizesPx: {
     smallest: 12,
@@ -57,17 +57,17 @@ const defaultTheme = {
     extraLarge: 22,
     huge: 24,
     jumbo: 32,
-    biggest: 40
+    biggest: 40,
   },
   fontSizesRem: {
-    smallest: .75,
-    small: .875,
+    smallest: 0.75,
+    small: 0.875,
     default: 1,
     large: 1.125,
     extraLarge: 1.375,
     huge: 1.5,
     jumbo: 2,
-    biggest: 2.5
+    biggest: 2.5,
   },
   fontWeights: {
     regular: 400,

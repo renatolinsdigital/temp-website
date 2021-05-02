@@ -1,5 +1,5 @@
 import styled, { StyledComponent, DefaultTheme } from 'styled-components';
-import { CssInJs } from '../../models';
+import { CssInJs } from 'shared/models';
 
 type TextProps = {
   theme: DefaultTheme;
@@ -36,9 +36,9 @@ type TextProps = {
   paddingBottom?: number;
   paddingLeft?: number;
   paddingRight?: number;
-}
+};
 
-const TextStyled: StyledComponent<"span", DefaultTheme, TextProps> = styled.span((
+const TextStyled: StyledComponent<'span', DefaultTheme, TextProps> = styled.span((
   {
     theme,
     fixedColor,
@@ -51,19 +51,19 @@ const TextStyled: StyledComponent<"span", DefaultTheme, TextProps> = styled.span
     paddingTop = 0,
     paddingBottom = 0,
     paddingLeft = 0,
-    paddingRight = 0
-  }: TextProps): CssInJs => {
+    paddingRight = 0,
+  }: TextProps,
+): CssInJs => {
   const {
     variantColors,
     fontSizesRem,
     fontSizesPx,
     lineHeights,
-    fontWeights
+    fontWeights,
   } = theme;
 
   const fontSizeToBeApplied = fontSize
-    &&
-    (
+    && (
       isRemFontSized
         ? `${fontSizesRem[fontSize]}rem`
         : `${fontSizesPx[fontSize]}px`
@@ -85,7 +85,7 @@ const TextStyled: StyledComponent<"span", DefaultTheme, TextProps> = styled.span
     paddingTop,
     paddingBottom,
     paddingLeft,
-    paddingRight
+    paddingRight,
   };
 });
 

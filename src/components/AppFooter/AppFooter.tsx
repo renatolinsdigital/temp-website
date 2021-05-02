@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import AndroidIcon from '@material-ui/icons/Android';
@@ -22,7 +23,7 @@ function AppFooter() {
               >
                 <GitHubIcon fontSize="small" />
               </Link>
-            </MenuStyled.Item >
+            </MenuStyled.Item>
 
             <MenuStyled.Item hasIcon>
               <Link
@@ -32,7 +33,7 @@ function AppFooter() {
               >
                 <LinkedInIcon />
               </Link>
-            </MenuStyled.Item >
+            </MenuStyled.Item>
 
             <MenuStyled.Item hasIcon>
               <Link
@@ -41,11 +42,11 @@ function AppFooter() {
               >
                 <AndroidIcon />
               </Link>
-            </MenuStyled.Item >
+            </MenuStyled.Item>
           </>
         </MenuStyled.List>
-      </ MenuStyled>
-    </BoxStyled >
+      </MenuStyled>
+    </BoxStyled>
   );
 }
 
