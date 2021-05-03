@@ -1,25 +1,34 @@
 import { AppProps } from 'next/app';
 import { ThemeProvider, createGlobalStyle, DefaultTheme } from 'styled-components';
-import useDarkMode from 'use-dark-mode';
-import { defaultTheme, lightVariantColors, darkVariantColors } from 'theme';
-import globalStyles from 'global-styles/index.scss';
+import { defaultTheme, lightVariantColors, darkVariantColors } from '../theme';
+import globalStyles from '../global-styles/index.scss';
+import { useStorageState } from 'shared/utilities';
+import GlobalActionsContext from '../context/GlobalActionsContext';
 
 const GlobalStyle = createGlobalStyle`${globalStyles}`;
 
 export default function App({ Component, pageProps }: AppProps) {
-  const { value } = useDarkMode(true, { storageKey: undefined, onChange: undefined });
+  const [isInDarkMode, setIsInDarkMode] = useStorageState<boolean>('isInDarkMode', true);
+
+  const toggleIsInDarkMode = () => {
+    setIsInDarkMode(value => !value);
+  };
+
+  const globalActions = { toggleIsInDarkMode };
 
   const theme: DefaultTheme = {
-    isInDarkMode: value,
+    isInDarkMode,
     ...defaultTheme,
-    variantColors: value ? darkVariantColors : lightVariantColors,
+    variantColors: isInDarkMode ? darkVariantColors : lightVariantColors
   };
 
   return (
     <>
       <GlobalStyle />
       <ThemeProvider theme={theme}>
-        <Component {...pageProps} />
+        <GlobalActionsContext.Provider value={globalActions}>
+          <Component {...pageProps} />
+        </GlobalActionsContext.Provider>
       </ThemeProvider>
     </>
   );
