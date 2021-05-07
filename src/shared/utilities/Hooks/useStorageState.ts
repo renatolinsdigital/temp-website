@@ -7,10 +7,11 @@ type Response<T> = [
 
 function useStorageState<T>(key: string, initialValue: T): Response<T> {
 
-  const [state, setState] = useState(
-    JSON.parse((typeof window !== 'undefined')
-      && localStorage.getItem(key) || JSON.stringify(initialValue))
-  );
+  const localStorageValue = (typeof window !== 'undefined') ? localStorage.getItem(key) : null;
+
+  const valueAsString = localStorageValue !== null ? localStorageValue : JSON.stringify(initialValue);
+
+  const [state, setState] = useState(JSON.parse(valueAsString));
 
   useEffect(() => {
     localStorage.setItem(key, JSON.stringify(state));

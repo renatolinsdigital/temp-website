@@ -15,7 +15,7 @@ function AppHeader() {
       paddingBottom={10}
     >
       <>
-        <button onClick={toggleIsInDarkMode}> TOGGLE</button>
+        {/* <button onClick={toggleIsInDarkMode}> TOGGLE</button> */}
 
         <TextStyled
           isInUpperCase
