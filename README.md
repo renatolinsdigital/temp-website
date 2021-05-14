@@ -40,10 +40,6 @@ declare module '*.scss';
 
 * Every __index__ file should have the __.ts__ extension. This will help on module importation, and also on identifying the type of file
 
-## Importing React
-
-* At this time, this project is importing React everywhere it is being used, even considering that Next.js is injecting it.
-
 ## Components
 
 * __Everything we see in screen must be a component, either from React or from Styled Components__. This will ensure a lot of benefits like theme or design systems adherence, testability, maintainability, shareability, composition over inheritance, clean coding, etc. No loose elements with a ```className``` should be placed in this project
