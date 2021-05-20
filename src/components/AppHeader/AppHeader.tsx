@@ -1,10 +1,9 @@
-import { useContext } from 'react';
-import { BoxStyled } from 'shared/containers';
-import { TextStyled } from 'shared/ui-elements';
-import GlobalActionsContext from 'context/GlobalActionsContext';
+// import { useContext } from 'react';
+import { BoxStyled, TextStyled } from 'shared/components';
+// import GlobalActionsContext from 'context/GlobalActionsContext';
 
 function AppHeader() {
-  const { toggleIsInDarkMode } = useContext(GlobalActionsContext);
+  // const { toggleIsInDarkMode } = useContext(GlobalActionsContext);
 
   return (
     <BoxStyled

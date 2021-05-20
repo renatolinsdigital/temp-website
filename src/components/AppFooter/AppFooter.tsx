@@ -2,9 +2,7 @@
 import GitHubIcon from '@material-ui/icons/GitHub';
 import LinkedInIcon from '@material-ui/icons/LinkedIn';
 import AndroidIcon from '@material-ui/icons/Android';
-import { BoxStyled } from 'shared/containers';
-import { Link } from 'shared/utilities';
-import { MenuStyled } from 'shared/ui-elements';
+import { BoxStyled, MenuStyled, Link } from 'shared/components';
 
 function AppFooter() {
   return (

@@ -1,4 +1,4 @@
-import styled, { StyledComponent, DefaultTheme } from 'styled-components';
+import styled, { DefaultTheme } from 'styled-components';
 import { CssInJs, VisualIdentityColorOptions } from 'shared/models';
 
 type TitleStyledProps = {
@@ -9,13 +9,13 @@ type TitleStyledProps = {
   isTextColorDark?: boolean;
 };
 
-const TitleStyled: StyledComponent<'h1', DefaultTheme, TitleStyledProps> = styled.h1((
+const TitleStyled = styled.h1<TitleStyledProps>((
   {
     theme,
     colorOption,
     isSubHeading,
     isInUpperCase = true,
-  }: TitleStyledProps,
+  }
 ): CssInJs => {
   const {
     isInDarkMode,

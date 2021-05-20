@@ -1,5 +1,4 @@
 type AlignItems =
-
   /* Axis alignments */
   'center'
   | 'start'
@@ -13,7 +12,6 @@ type AlignItems =
   | 'self-start'
   | 'self-end'
   | 'baseline'
-
   /* Global values */
   | 'inherit'
   | 'initial'

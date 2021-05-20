@@ -25,19 +25,18 @@ type MenuStyledContainer = StyledComponent<'nav', DefaultTheme, MenuProps> & {
   Item: MenuItemContainer;
 };
 
-// @ts-ignore
-const MenuStyled: MenuStyledContainer = styled.nav(
-  ({ hasNoMainAxisAlignment }: MenuProps): CssInJs => (
+const MenuStyled = styled.nav<MenuProps>(
+  ({ hasNoMainAxisAlignment }): CssInJs => (
     {
       display: 'flex',
       width: '100%',
       justifyContent: hasNoMainAxisAlignment ? 'flex-start' : 'center',
     }
   ),
-);
+) as MenuStyledContainer;
 
-MenuStyled.List = styled.ul(
-  ({ isVertical }: ListProps): CssInJs => (
+MenuStyled.List = styled.ul<ListProps>(
+  ({ isVertical }): CssInJs => (
     {
       display: 'flex',
       justifyContent: 'center',
@@ -49,8 +48,8 @@ MenuStyled.List = styled.ul(
   ),
 );
 
-MenuStyled.Item = styled.li(
-  ({ hasIcon, hoverColor, theme }: ItemProps): CssInJs => {
+MenuStyled.Item = styled.li<ItemProps>(
+  ({ hasIcon, hoverColor, theme }): CssInJs => {
     const selectedHoverColor = hoverColor
       ? theme.colors[hoverColor]
       : theme.colors.transparent;

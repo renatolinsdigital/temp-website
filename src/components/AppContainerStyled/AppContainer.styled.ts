@@ -17,7 +17,7 @@ const AppContainerStyled = styled.div(({ theme }) => {
     lineHeight: lineHeights.body,
     backgroundColor: variantColors.appBackground,
     color: variantColors.text,
-  };
+  }
 });
 
 export default AppContainerStyled;

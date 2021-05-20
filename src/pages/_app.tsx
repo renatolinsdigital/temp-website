@@ -2,7 +2,7 @@ import { AppProps } from 'next/app';
 import { ThemeProvider, createGlobalStyle, DefaultTheme } from 'styled-components';
 import { defaultTheme, lightVariantColors, darkVariantColors } from '../theme';
 import globalStyles from '../global-styles/index.scss';
-import { useStorageState } from 'shared/utilities';
+import { useStorageState } from 'shared/hooks';
 import GlobalActionsContext from '../context/GlobalActionsContext';
 
 const GlobalStyle = createGlobalStyle`${globalStyles}`;

@@ -1,4 +1,4 @@
-import styled, { StyledComponent, DefaultTheme } from 'styled-components';
+import styled, { DefaultTheme } from 'styled-components';
 import { CssInJs, BoxProps } from 'shared/models';
 
 type TextProps = BoxProps & {
@@ -34,7 +34,7 @@ type TextProps = BoxProps & {
   isRemFontSized?: boolean;
 };
 
-const TextStyled: StyledComponent<'span', DefaultTheme, TextProps> = styled.span((
+const TextStyled = styled.span<TextProps>((
   {
     theme,
     fixedColor,
@@ -48,7 +48,7 @@ const TextStyled: StyledComponent<'span', DefaultTheme, TextProps> = styled.span
     paddingBottom = 0,
     paddingLeft = 0,
     paddingRight = 0,
-  }: TextProps,
+  }
 ): CssInJs => {
   const {
     variantColors,

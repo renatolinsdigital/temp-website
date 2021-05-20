@@ -1,3 +1,4 @@
+import { DefaultTheme } from 'styled-components';
 import ChildrenElement from './ChildrenElement.model';
 import VisualIdentityColorOptions from './VisualIdentityColorOptions.model';
 
@@ -8,6 +9,7 @@ interface AnchorProps {
   label?: string;
   isOpeningInNewTab?: boolean;
   children?: ChildrenElement;
+  theme?: DefaultTheme;
 }
 
 export default AnchorProps;

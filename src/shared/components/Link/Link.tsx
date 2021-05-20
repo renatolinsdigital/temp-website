@@ -1,5 +1,5 @@
-import AnchorProps from 'shared/models/AnchorProps.model';
-import AnchorStyled from 'shared/utilities/AnchorStyled/Anchor.styled';
+import { AnchorProps } from 'shared/models';
+import AnchorStyled from '../AnchorStyled/Anchor.styled';
 
 function Link(
   {

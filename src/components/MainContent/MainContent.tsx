@@ -1,7 +1,5 @@
 import { Logo } from 'components';
-import { TitleStyled, MenuStyled } from 'shared/ui-elements';
-import { Link } from 'shared/utilities';
-import { BoxStyled } from 'shared/containers';
+import { BoxStyled, TitleStyled, MenuStyled, Link } from 'shared/components';
 
 function MainContent() {
   return (

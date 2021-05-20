@@ -4,8 +4,6 @@ interface GlobalActions {
   toggleIsInDarkMode?: () => void;
 };
 
-const globalActions: GlobalActions = {};
-
-const GlobalActionsContext = createContext(globalActions);
+const GlobalActionsContext = createContext<GlobalActions>({});
 
 export default GlobalActionsContext;

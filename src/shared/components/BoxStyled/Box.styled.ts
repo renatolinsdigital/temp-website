@@ -1,4 +1,4 @@
-import styled, { DefaultTheme, StyledComponent } from "styled-components";
+import styled, { DefaultTheme } from "styled-components";
 import { CssInJs, JustifyContent, AlignItems, BoxProps } from "shared/models";
 
 type BoxStyledProps = BoxProps & {
@@ -18,7 +18,7 @@ type BoxStyledProps = BoxProps & {
   | 'transparent';
 }
 
-const BoxStyled: StyledComponent<"div", DefaultTheme, BoxStyledProps> = styled.div((
+const BoxStyled = styled.div<BoxStyledProps>((
   {
     theme,
     flex = 1,
@@ -38,7 +38,7 @@ const BoxStyled: StyledComponent<"div", DefaultTheme, BoxStyledProps> = styled.d
     verticalBreakPoint,
     justifyContent = 'center',
     alignItems = 'center'
-  }: BoxStyledProps): CssInJs => {
+  }): CssInJs => {
 
   return {
     display: 'flex',
