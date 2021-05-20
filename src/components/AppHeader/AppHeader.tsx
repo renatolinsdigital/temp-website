@@ -1,10 +1,8 @@
-// import { useContext } from 'react';
+import { useToggleDarkModeContext } from 'context';
 import { BoxStyled, TextStyled } from 'shared/components';
-// import GlobalActionsContext from 'context/GlobalActionsContext';
 
 function AppHeader() {
-  // const { toggleIsInDarkMode } = useContext(GlobalActionsContext);
-
+  const toggleIsInDarkMode = useToggleDarkModeContext();
   return (
     <BoxStyled
       justifyContent="flex-end"
@@ -14,7 +12,7 @@ function AppHeader() {
       paddingBottom={10}
     >
       <>
-        {/* <button onClick={toggleIsInDarkMode}> TOGGLE</button> */}
+        <button onClick={toggleIsInDarkMode}> TOGGLE</button>
 
         <TextStyled
           isInUpperCase
