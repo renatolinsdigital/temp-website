@@ -1,15 +1,15 @@
-import { useToggleDarkModeContext } from 'context';
+// import { useToggleDarkModeContext } from 'context';
 import { BoxStyled, TextStyled } from 'shared/components';
 
 function AppHeader() {
-  const toggleIsInDarkMode = useToggleDarkModeContext();
+  // const toggleIsInDarkMode = useToggleDarkModeContext();
   return (
     <BoxStyled
-      justifyContent="flex-end"
       paddingTop={10}
-      paddingRight={15}
       paddingLeft={15}
+      paddingRight={15}
       paddingBottom={10}
+      justifyContent="flex-end"
     >
       <>
         {/* <button onClick={toggleIsInDarkMode}> TOGGLE</button> */}
@@ -22,8 +22,8 @@ function AppHeader() {
           Status:
         </TextStyled>
         <TextStyled
-          isInUpperCase
           isBold
+          isInUpperCase
           fontSize="smallest"
         >
           coding

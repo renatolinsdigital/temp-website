@@ -1,5 +1,7 @@
 import { Logo } from 'components';
-import { BoxStyled, TitleStyled, MenuStyled, Link } from 'shared/components';
+import {
+  BoxStyled, TitleStyled, MenuStyled, Link,
+} from 'shared/components';
 
 function MainContent() {
   return (
@@ -60,7 +62,7 @@ function MainContent() {
           </MenuStyled>
 
           <TitleStyled colorOption="secondary">
-            Recent activity
+            Latest docs created
           </TitleStyled>
 
           <MenuStyled>
@@ -69,8 +71,8 @@ function MainContent() {
                 <MenuStyled.Item hoverColor="secondary">
                   <Link
                     hoverColor="secondary"
-                    location="https://www.linkedin.com/pulse/styled-components-em-projetos-baseados-react-web-vs-mobile-lins"
-                    label="Styled components thoughts"
+                    location="https://whimsical.com/react-flow-of-data-LwGBJDmLRjFJAC4eq8CsYR"
+                    label="Flow of data inside React applications"
                     isOpeningInNewTab
                   />
                 </MenuStyled.Item>
