@@ -29,7 +29,7 @@ This is the temporary version of my Website. Below there are some project´s con
 
 ## Module resolution
 
-* Any Javascript or Sass file can be used as a module. Because of that, inside the file __next-env.d.ts__ we have the following declaration: 
+* Any Javascript or Sass file can be used as a module. Because of that, inside the file __react-app-env.d.ts__ we have the following declaration: 
 
 ```
 declare module '*.js';
