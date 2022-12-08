@@ -52,8 +52,8 @@ function MainContent() {
                 <MenuStyled.Item hoverColor="primary">
                   <Link
                     hoverColor="primary"
-                    location="https://github.com/renatolinsdigital/dweeb-fight-react"
-                    label="RPG fighting mini-game"
+                    location="https://github.com/renatolinsdigital/game-with-class-components"
+                    label="RPG Game with React and class components"
                     isOpeningInNewTab
                   />
                 </MenuStyled.Item>
