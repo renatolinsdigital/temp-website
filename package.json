@@ -11,7 +11,9 @@
     "@emotion/styled": "^11.1.5",
     "@material-ui/core": "^4.12.4",
     "@material-ui/icons": "^4.11.3",
+    "@next/eslint-plugin-next": "^13.0.6",
     "@types/next": "^9.0.0",
+    "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-jsx-a11y": "^6.4.1",
     "next": "^13.0.6",
     "react": "^18.2.0",
@@ -32,6 +34,7 @@
     "eslint": "^8.29.0",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-react": "^7.22.0",
+    "prettier": "^2.8.1",
     "typescript": "^4.9.3"
   },
   "license": "MIT"

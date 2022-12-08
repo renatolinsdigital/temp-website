@@ -34,8 +34,11 @@
   ],
   "include": [
     "next-env.d.ts",
+    "react-app-env.d.ts",
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx",
+    "**/*.scss",
+    "src"
   ],
   "files": [
     "src/styled.d.ts"

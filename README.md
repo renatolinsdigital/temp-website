@@ -49,19 +49,7 @@ declare module '*.scss';
 * As long as this project uses a Javascript syntax on styled components, we can extend styles very easily, by simply creating an object to be merged within other styled components. 
 * It will be considered a best practice to extend interfaces with __&__, and models can also be part of the __shared__ folder. We can see this approach inside __TextStyled.styled.ts__ for example, which makes use of a shared prop interface called ```PaddingBoxStyledProps```
 
-## General React´s best practices
-
-* As per new JSX Transform(React 17+), it is not necessary anymore to import React while using JSX
-
-## Dealing with Typescript
-
-* Ignoring a Typescript rule(with __// @ts-ignore__) can __ONLY__ be made for Styled components that are also a compound component. This is necessary because these types of components demands a mandatory property that is only assigned after component´s definitions. 
-
 ## Theming
 
 * Every single component with text or colors is using theme properties. That being said, we will differentiate between theme default colors (colors) and colors that might vary within the theme (variantColors), for example, when using dark mode. Theme properties are already setup, typed and injected with this idea in mind.
-
-## Linting [TBD - Not fully configured yet]
-
-This project is configured with ESLint in __.eslintrc.json__ file. AirBnB style guides for Typescript(__eslint-config-airbnb-typescript__) is applied as a plugin. Be sure to also have ESLint plugin installed on your code editor. To run linter and have output results, use this command: __npx eslint . --ext .js,.jsx,.ts,.tsx__ [To be configured]
 
